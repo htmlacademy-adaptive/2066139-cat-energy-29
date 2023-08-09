@@ -1,0 +1,38 @@
+@use "../../global/variables.scss" as v;
+
+.promo-product {
+  position: relative;
+  text-align: center;
+}
+
+.promo-product__promo-text {
+  margin: 0 0 138px;
+  padding: 27px 0 164px;
+  background: v.$basic-green url("../img/cat-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.promo-product__title {
+  margin: 0 0 25px;
+}
+
+.promo-product__slogan {
+  margin: 0;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.promo-product__image {
+  position: absolute;
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-product__button-guide {
+  min-width: 280px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 18px;
+}

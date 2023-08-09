@@ -1,0 +1,37 @@
+@use "../../global/variables.scss" as v;
+
+.additionally-product-card {
+  padding: 13px 0 19px;
+  border-top: 1px solid v.$special_grey;
+  border-left: none;
+  border-right: none;
+
+  &:last-child {
+    border-bottom: 1px solid v.$special_grey;
+  }
+}
+
+.additionally-product-card__title {
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: v.$special_dark-grey-alt;
+  text-transform: uppercase;
+}
+
+.additionally-product-card__text-wrapper {
+  margin-bottom: 15px;
+}
+
+.additionally-product-card__description,
+.additionally-product-card__price {
+  font-family: "Lato", sans-serif;
+  line-height: 14px;
+  color: v.$special_dark-grey;
+}
+
+.additionally-product-card__button {
+  width: 100%;
+}

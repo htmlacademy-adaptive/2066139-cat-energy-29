@@ -1,0 +1,86 @@
+@use "../../global/variables.scss" as v;
+
+.program-nutrition-form__inner-header {
+  padding-bottom: 39px;
+}
+
+.program-nutrition-form__title {
+  margin: 0;
+  margin-bottom: 37px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-nutrition-form__description {
+  max-width: 230px;
+  margin: 0;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.cat-nutrition {
+  padding-top: 22px;
+  padding-bottom: 19px;
+}
+
+.cat-param__list,
+.cat-nutrition__list,
+.additionally__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cat-param__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.cat-nutrition__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.owner-data {
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+
+.owner-data__title {
+  margin-bottom: 35px;
+}
+
+.owner-data__label:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.program-form__comment {
+  padding-bottom: 40px;
+}
+
+.additionally {
+  padding-bottom: 34px;
+}
+
+.additionally__title {
+  margin-bottom: 34px;
+}
+
+.additionally__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.program-form__inner-footer {
+  text-align: center;
+}
+
+.program-form__button {
+  width: 100%;
+  margin-bottom: 21px;
+  font-family: inherit;
+  border: none;
+}
+
+.program-form__legend {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
