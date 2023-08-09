@@ -11,9 +11,9 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: v.$basic_grey;
-}
 
-.button--secondary {
-  color: #ffffff;
-  background-color: v.$basic-green;
+  &--secondary {
+    color: #ffffff;
+    background-color: v.$basic-green;
+  }
 }

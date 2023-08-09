@@ -9,6 +9,7 @@
 
 .data-label {
   display: inline-block;
+
   @include text-style;
 }
 
@@ -21,7 +22,9 @@
   width: 100%;
   padding: 14px 15px 13px;
   font-family: inherit;
+
   @include text-style;
+
   border: none;
   outline: 1px solid #e7e7e7;
 }
