@@ -3,7 +3,7 @@
 .address__contacts {
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: v.$basic_grey;
+  background-color: v.$basic-grey;
 }
 
 .contacts__title {
@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #111111;
+  color: v.$basic-black-alt;
   text-transform: uppercase;
 }
 

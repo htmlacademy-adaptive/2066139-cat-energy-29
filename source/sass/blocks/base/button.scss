@@ -10,10 +10,10 @@
   color: v.$special_dark-grey;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: v.$basic_grey;
+  background-color: v.$basic-grey;
 
   &--secondary {
-    color: #ffffff;
+    color: v.$basic-white;
     background-color: v.$basic-green;
   }
 }

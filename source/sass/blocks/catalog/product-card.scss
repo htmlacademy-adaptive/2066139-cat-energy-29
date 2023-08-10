@@ -1,6 +1,6 @@
 @use "../../global/variables.scss" as v;
 
-@mixin product-catalog-title($color: #111111) {
+@mixin product-catalog-title($color: v.$basic-black-alt) {
   margin: 0;
   font-size: 16px;
   font-weight: inherit;

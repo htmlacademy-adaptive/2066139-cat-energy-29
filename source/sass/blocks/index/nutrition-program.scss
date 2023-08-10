@@ -4,7 +4,7 @@
   width: 100%;
   padding: 30px 20px 18px;
   box-sizing: border-box;
-  background-color: v.$basic_grey;
+  background-color: v.$basic-grey;
 }
 
 .nutrition-program__title {
@@ -24,14 +24,14 @@
     width: 100%;
     height: 1px;
     margin-top: 23px;
-    background-color: #d9d9d9;
+    background-color: v.$index-line-nutrition;
   }
 }
 
 .nutrition-program__link {
   font-size: 16px;
   line-height: 16px;
-  color: #000000;
+  color: v.$basic-black;
   text-decoration: none;
   text-transform: uppercase;
 }

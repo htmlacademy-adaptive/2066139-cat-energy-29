@@ -1,3 +1,5 @@
+@use "../../global/variables.scss" as v;
+
 html {
   height: 100%;
 }
@@ -11,6 +13,6 @@ body {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  color: #000000;
-  background-color: #ffffff;
+  color: v.$basic-black;
+  background-color: v.$basic-white;
 }
