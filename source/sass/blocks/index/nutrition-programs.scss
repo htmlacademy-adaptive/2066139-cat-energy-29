@@ -1,0 +1,16 @@
+.nutrition-programs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nutrition-programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nutrition-programs__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

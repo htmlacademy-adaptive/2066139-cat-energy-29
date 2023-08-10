@@ -1,0 +1,17 @@
+@use "../../global/variables.scss" as v;
+
+.title-block {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+
+  &--secondary-white {
+    line-height: 36px;
+    color: v.$basic-white;
+  }
+
+  &--secondary-black {
+    line-height: 36px;
+    color: v.$basic-black;
+  }
+}

@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html" aria-current="page">
+      <a class="main-header__logo-link" href="index.html" aria-current="page">
         <img src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
-      </a>
-      <a class="main-header__logo-text" href="index.html" aria-current="page">
-        <img src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -35,37 +34,37 @@
     </header>
 
     <main class="main-inner-program-nutrition main-container">
-      <section class="program-nutrition container">
-        <header class="program-nutrition__inner-header">
-          <h1 class="program-nutrition__title title-block">Подбор программы</h1>
-          <p class="program-nutrition__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <section class="program-nutrition-form container">
+        <header class="program-nutrition-form__inner-header">
+          <h1 class="program-nutrition-form__title">Подбор программы</h1>
+          <p class="program-nutrition-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </header>
-        <form class="program-nutrition__form program-form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="program-nutrition-form__data-form program-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="program-form__cat-param-input cat-param" role="group" aria-labelledby="cat-data-title">
             <h2 class="visually-hidden" id="cat-data-title">Параметры кота</h2>
             <ul class="cat-param__list">
               <li class="cat-param__item">
-                <label class="cat-param__label cat-param-label">
-                  <span class="cat-param-label__text">
+                <label class="cat-param__label data-label">
+                  <span class="data-label__text">
                     Имя:*
                   </span>
-                  <input class="cat-param-label__input-box field-data" type="text" name="cat-name" value="Барсик" placeholder="Введите имя котика" required>
+                  <input class="data-label__input-box field-data" type="text" name="cat-name" value="Барсик" placeholder="Введите имя котика" required>
                 </label>
               </li>
               <li class="cat-param__item">
-                <label class="cat-param__label cat-param-label">
-                  <span class="cat-param-label__text">
+                <label class="cat-param__label data-label">
+                  <span class="data-label__text">
                     Вес:*
                   </span>
-                  <input class="cat-param-label__input-box field-data" type="number" name="cat-weight" value="7" placeholder="Введите вес котика" required>
+                  <input class="data-label__input-box field-data" type="number" name="cat-weight" value="7" placeholder="Введите вес котика" required>
                 </label>
               </li>
               <li class="cat-param__item">
-                <label class="cat-param__label cat-param-label">
-                  <span class="cat-param-label__text">
+                <label class="cat-param__label data-label">
+                  <span class="data-label__text">
                     Возраст (лет):
                   </span>
-                  <input class="cat-param-label__input-box field-data" type="number" name="cat-age" value="7" placeholder="Введите возраст котика">
+                  <input class="data-label__input-box field-data" type="number" name="cat-age" value="7" placeholder="Введите возраст котика">
                 </label>
               </li>
             </ul>
@@ -74,68 +73,68 @@
             <h2 class="visually-hidden" id="program-nutrition-title">Выбор программы питания</h2>
             <ul class="cat-nutrition__list">
               <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label nutrition-control">
-                  <input class="nutrition-control__control-input control-input" type="radio" name="type-of-nutrition" value="weight-loss" checked>
+                <label class="cat-nutrition__label control-label">
+                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-loss" checked>
                   Похудение
                 </label>
               </li>
               <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label nutrition-control">
-                  <input class="nutrition-control__control-input control-input" type="radio" name="type-of-nutrition" value="weight-gain">
+                <label class="cat-nutrition__label control-label">
+                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-gain">
                   Набор массы
                 </label>
               </li>
               <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label nutrition-control">
-                  <input class="nutrition-control__control-input control-input" type="radio" name="type-of-nutrition" value="dont-know-nutrition">
+                <label class="cat-nutrition__label control-label">
+                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="dont-know-nutrition">
                   Не знаю (нужен ваш совет)
                 </label>
               </li>
             </ul>
           </div>
           <div class="program-form__owner-data-input owner-data" role="group" aria-labelledby="cat-owner-title">
-            <h2 class="owner-data__title" id="cat-owner-title">Контактные данные (владельца кота)</h2>
-            <label class="owner-data__label owner-data-label">
-              <span class="owner-data-label__text">
+            <h2 class="owner-data__title title-form" id="cat-owner-title">Контактные данные (владельца кота)</h2>
+            <label class="owner-data__label data-label">
+              <span class="data-label__text">
                 E-mail:*
               </span>
-              <input class="owner-data-label__input-box field-data field-data--icon-email" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="Введите ваш e-mail" required>
+              <input class="data-label__input-box field-data field-data--icon-email" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="Введите ваш e-mail" required>
             </label>
-            <label class="owner-data__label owner-data-label">
-              <span class="owner-data-label__text">
+            <label class="owner-data__label data-label">
+              <span class="data-label__text">
                 Телефон:*
               </span>
-              <input class="owner-data-label__input-box field-data field-data--icon-tel" type="tel" name="owner-tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
+              <input class="data-label__input-box field-data field-data--icon-tel" type="tel" name="owner-tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
             </label>
           </div>
           <div class="program-form__comment comment-text" role="group" aria-labelledby="comment-title">
-            <h2 class="comment-text__title" id="comment-title">Комментарий</h2>
+            <h2 class="comment-text__title title-form" id="comment-title">Комментарий</h2>
             <textarea class="comment-text__textarea" name="comment" spellcheck="true" placeholder="Расскажите обо всех повадках кота" rows="10">Расскажите обо всех повадках кота</textarea>
           </div>
           <div class="program-form__additionally-input additionally" role="group" aria-labelledby="additionally-title">
-            <h2 class="additionally__title" id="additionally-title">Дополнительно</h2>
+            <h2 class="additionally__title title-form" id="additionally-title">Дополнительно</h2>
             <ul class="additionally__list">
               <li class="additionally__item">
-                <label class="additionally__label additionally-control">
-                  <input class="additionally-control__control-input control-input" type="checkbox" name="add-sweetener" checked>
+                <label class="additionally__label control-label">
+                  <input class="control-label__control-input control-input" type="checkbox" name="add-sweetener" checked>
                   Cахарозаменитель
                 </label>
               </li>
               <li class="additionally__item">
-                <label class="additionally__label additionally-control">
-                  <input class="additionally-control__control-input control-input" type="checkbox" name="add-water">
+                <label class="additionally__label control-label">
+                  <input class="control-label__control-input control-input" type="checkbox" name="add-water">
                   Питьевая вода
                 </label>
               </li>
               <li class="additionally__item">
-                <label class="additionally__label additionally-control">
-                  <input class="additionally-control__control-input control-input" type="checkbox" name="add-milk">
+                <label class="additionally__label control-label">
+                  <input class="control-label__control-input control-input" type="checkbox" name="add-milk">
                   Молоко
                 </label>
               </li>
               <li class="additionally__item">
-                <label class="additionally__label additionally-control">
-                  <input class="additionally-control__control-input control-input" type="checkbox" name="add-vitamins">
+                <label class="additionally__label control-label">
+                  <input class="control-label__control-input control-input" type="checkbox" name="add-vitamins">
                   Витамины
                 </label>
               </li>
@@ -151,10 +150,12 @@
 
     <footer class="main-footer">
       <h2 class="visually-hidden">Контакты</h2>
-      <section class="main-footer__address address container">
+      <section class="main-footer__address address">
         <h3 class="visually-hidden">Почтовый адрес</h3>
-        <b class="address__title">Приглашаем к сотрудничеству дилеров!</b>
-        <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="address__contacts contacts container">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
         <div class="address__map location">
           <iframe class="location__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197732!2d30.320472476646085!3d59.93871916209431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690749136755!5m2!1sru!2sru"
@@ -194,12 +195,14 @@
             </a>
           </li>
         </ul>
-        <a class="social__htmlacademy-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="social__logo-htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="htmlacademy__company-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="#666666" viewBox="0 0 27 34" role="img" aria-label="Логотип академии">
-            <path fill-rule="evenodd" d="M13.6426.0158 13.5 0 0 1.4073V26.013L13.5 34 27 26.0129V1.4073L13.6426.0158ZM25.2344 25.015 13.5 31.9573 1.7656 25.0151V14.9293l11.6851 6.9158.0194 1.2533-8.0166-4.7436-.0106 1.2253 8.0465 4.8084.0194 1.2865-8.0447-4.7576-.0106 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.9579 11.7995 6.8336Zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369Z"/>
-          </svg>
-        </a>
+        <div class="social__logo-wrapper">
+          <a class="social__htmlacademy-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="social__logo-htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="htmlacademy__company-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="#666666" viewBox="0 0 27 34" role="img" aria-label="Логотип академии">
+              <path fill-rule="evenodd" d="M13.6426.0158 13.5 0 0 1.4073V26.013L13.5 34 27 26.0129V1.4073L13.6426.0158ZM25.2344 25.015 13.5 31.9573 1.7656 25.0151V14.9293l11.6851 6.9158.0194 1.2533-8.0166-4.7436-.0106 1.2253 8.0465 4.8084.0194 1.2865-8.0447-4.7576-.0106 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.9579 11.7995 6.8336Zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369Z"/>
+            </svg>
+          </a>
+        </div>
       </section>
     </footer>
 

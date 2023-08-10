@@ -1,0 +1,21 @@
+@use "../../global/variables.scss" as v;
+
+.social {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.social__list {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.social__htmlacademy-text {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: v.$special_dark-grey;
+  text-decoration: none;
+}

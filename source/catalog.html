@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html" aria-current="page">
+      <a class="main-header__logo-link" href="index.html" aria-current="page">
         <img src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
-      </a>
-      <a class="main-header__logo-text" href="index.html" aria-current="page">
-        <img src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -35,16 +34,16 @@
     </header>
 
     <main class="main-inner-catalog main-container">
-      <h1 class="main-inner-catalog__title">Каталог продукции</h1>
-      <section class="catalog-product">
+      <h1 class="main-inner-catalog__title title-block title-block--secondary-black">Каталог продукции</h1>
+      <section class="catalog-product container">
         <h2 class="visually-hidden">Список товаров для кошачьего питания</h2>
         <ul class="catalog-product__list cat-product">
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-pro-chicken-500.png" alt="Корм линейки «Pro» с курицей 500 грамм">
+              <img class="product-card__image" src="img/cat-energy-pro-chicken-500.png" width="68" height="86" alt="Корм линейки «Pro» с курицей 500 грамм">
             </a>
             <a class="product-card__link-title" href="#">
-              <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
+              <h3 class="product-card__title product-catalog-title">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="product-card__parameters-list parameters">
               <div class="parameters__item product-parameter">
@@ -65,7 +64,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-pro-chicken-1000.png" alt="Корм линейки «Pro» с курицей 1000 грамм">
+              <img class="product-card__image" src="img/cat-energy-pro-chicken-1000.png" width="84" height="100" alt="Корм линейки «Pro» с курицей 1000 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
@@ -89,7 +88,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-pro-fish-500.png" alt="Корм линейки «Pro» с рыбой 500 грамм">
+              <img class="product-card__image" src="img/cat-energy-pro-fish-500.png" width="68" height="78" alt="Корм линейки «Pro» с рыбой 500 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
@@ -113,7 +112,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-pro-fish-1000.png" alt="Корм линейки «Pro» с рыбой 1000 грамм">
+              <img class="product-card__image" src="img/cat-energy-pro-fish-1000.png" width="84" height="100" alt="Корм линейки «Pro» с рыбой 1000 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
@@ -137,7 +136,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-slim-buckwheat-500.png" alt="Корм линейки «Slim» с гречкой 500 грамм">
+              <img class="product-card__image" src="img/cat-energy-slim-buckwheat-500.png" width="68" height="78" alt="Корм линейки «Slim» с гречкой 500 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 500 г</h3>
@@ -161,7 +160,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-slim-buckwheat-1000.png" alt="Корм линейки «Slim» с гречкой 1000 грамм">
+              <img class="product-card__image" src="img/cat-energy-slim-buckwheat-1000.png" width="84" height="100" alt="Корм линейки «Slim» с гречкой 1000 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 1000 г</h3>
@@ -185,7 +184,7 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/cat-energy-slim-rice-500.png" alt="Корм линейки «Slim» с рисом 500 грамм">
+              <img class="product-card__image" src="img/cat-energy-slim-rice-500.png" width="72" height="84" alt="Корм линейки «Slim» с рисом 500 грамм">
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 500 г</h3>
@@ -214,32 +213,40 @@
           </li>
         </ul>
       </section>
-      <section class="additionally-product">
-        <h2 class="additionally-product__title title-block">Дополнительные товары</h2>
+      <section class="additionally-product container">
+        <h2 class="additionally-product__title">Дополнительные товары</h2>
         <ul class="additionally-product__list">
-          <li class="additionally-product__item card-goods">
-            <h3 class="card-goods__title">Cахарозаменитель</h3>
-            <span class="card-goods__description">1 упаковка (100 г)</span>
-            <span class="card-goods__price">200 ₽</span>
-            <a class="card-goods__button button button--secondary" href="#">Заказать</a>
+          <li class="additionally-product__item additionally-product-card">
+            <h3 class="additionally-product-card__title">Cахарозаменитель</h3>
+            <div class="additionally-product-card__text-wrapper">
+              <span class="additionally-product-card__description">1 упаковка (100 г)</span>
+              <span class="additionally-product-card__price">200 ₽</span>
+            </div>
+            <a class="additionally-product-card__button button button--secondary" href="#">Заказать</a>
           </li>
-          <li class="additionally-product__item card-goods">
-            <h3 class="card-goods__title">Питьевая вода</h3>
-            <span class="card-goods__description">5 литров</span>
-            <span class="card-goods__price">50 ₽</span>
-            <a class="card-goods__button button button--secondary" href="#">Заказать</a>
+          <li class="additionally-product__item additionally-product-card">
+            <h3 class="additionally-product-card__title">Питьевая вода</h3>
+            <div class="additionally-product-card__text-wrapper">
+              <span class="additionally-product-card__description">5 литров</span>
+              <span class="additionally-product-card__price">50 ₽</span>
+            </div>
+            <a class="additionally-product-card__button button button--secondary" href="#">Заказать</a>
           </li>
-          <li class="additionally-product__item card-goods">
-            <h3 class="card-goods__title">Молоко</h3>
-            <span class="card-goods__description">1 литр</span>
-            <span class="card-goods__price">100 ₽</span>
-            <a class="card-goods__button button button--secondary" href="#">Заказать</a>
+          <li class="additionally-product__item additionally-product-card">
+            <h3 class="additionally-product-card__title">Молоко</h3>
+            <div class="additionally-product-card__text-wrapper">
+              <span class="additionally-product-card__description">1 литр</span>
+              <span class="additionally-product-card__price">100 ₽</span>
+            </div>
+            <a class="additionally-product-card__button button button--secondary" href="#">Заказать</a>
           </li>
-          <li class="additionally-product__item card-goods">
-            <h3 class="card-goods__title">Витамины</h3>
-            <span class="card-goods__description">1 упаковка (30 г)</span>
-            <span class="card-goods__price">300 ₽</span>
-            <a class="card-goods__button button button--secondary" href="#">Заказать</a>
+          <li class="additionally-product__item additionally-product-card">
+            <h3 class="additionally-product-card__title">Витамины</h3>
+            <div class="additionally-product-card__text-wrapper">
+              <span class="additionally-product-card__description">1 упаковка (30 г)</span>
+              <span class="additionally-product-card__price">300 ₽</span>
+            </div>
+            <a class="additionally-product-card__button button button--secondary" href="#">Заказать</a>
           </li>
         </ul>
       </section>
@@ -253,10 +260,12 @@
 
     <footer class="main-footer">
       <h2 class="visually-hidden">Контакты</h2>
-      <section class="main-footer__address address container">
+      <section class="main-footer__address address">
         <h3 class="visually-hidden">Почтовый адрес</h3>
-        <b class="address__title">Приглашаем к сотрудничеству дилеров!</b>
-        <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="address__contacts contacts container">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
         <div class="address__map location">
           <iframe class="location__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197732!2d30.320472476646085!3d59.93871916209431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690749136755!5m2!1sru!2sru"
@@ -296,12 +305,14 @@
             </a>
           </li>
         </ul>
-        <a class="social__htmlacademy-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="social__logo-htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="htmlacademy__company-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="#666666" viewBox="0 0 27 34" role="img" aria-label="Логотип академии">
-            <path fill-rule="evenodd" d="M13.6426.0158 13.5 0 0 1.4073V26.013L13.5 34 27 26.0129V1.4073L13.6426.0158ZM25.2344 25.015 13.5 31.9573 1.7656 25.0151V14.9293l11.6851 6.9158.0194 1.2533-8.0166-4.7436-.0106 1.2253 8.0465 4.8084.0194 1.2865-8.0447-4.7576-.0106 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.9579 11.7995 6.8336Zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369Z"/>
-          </svg>
-        </a>
+        <div class="social__logo-wrapper">
+          <a class="social__htmlacademy-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="social__logo-htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="htmlacademy__company-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="#666666" viewBox="0 0 27 34" role="img" aria-label="Логотип академии">
+              <path fill-rule="evenodd" d="M13.6426.0158 13.5 0 0 1.4073V26.013L13.5 34 27 26.0129V1.4073L13.6426.0158ZM25.2344 25.015 13.5 31.9573 1.7656 25.0151V14.9293l11.6851 6.9158.0194 1.2533-8.0166-4.7436-.0106 1.2253 8.0465 4.8084.0194 1.2865-8.0447-4.7576-.0106 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.9579 11.7995 6.8336Zm0-1.2253L13.4401 5.3108 1.7656 12.2195V2.9897L13.5 1.7644l11.7344 1.2253v9.2369Z"/>
+            </svg>
+          </a>
+        </div>
       </section>
     </footer>
 

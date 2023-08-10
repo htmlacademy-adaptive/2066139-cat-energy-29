@@ -1,0 +1,30 @@
+@use "../../global/variables.scss" as v;
+
+@mixin text-style {
+  font-size: 16px;
+  line-height: 18px;
+  color: v.$special_dark-grey;
+  text-transform: uppercase;
+}
+
+.data-label {
+  display: inline-block;
+
+  @include text-style;
+}
+
+.data-label__text {
+  margin-right: 13px;
+}
+
+.field-data {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 15px 13px;
+  font-family: inherit;
+
+  @include text-style;
+
+  border: none;
+  outline: 1px solid v.$border-field;
+}

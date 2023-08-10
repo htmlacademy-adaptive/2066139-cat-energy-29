@@ -1,0 +1,21 @@
+@use "../../global/variables.scss" as v;
+
+.site-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__item {
+  text-align: center;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 22px 0 24px;
+  font-size: 20px;
+  line-height: 20px;
+  color: v.$basic-black;
+  text-decoration: none;
+  text-transform: uppercase;
+}

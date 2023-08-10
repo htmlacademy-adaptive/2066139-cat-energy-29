@@ -1,0 +1,42 @@
+@use "../../global/variables.scss" as v;
+
+.nutritional-results {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.nutritional-results__title {
+  margin-bottom: 40px;
+}
+
+.nutritional-results__description {
+  margin-bottom: 20px;
+}
+
+.nutritional-results__list {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.nutritional-results__param {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nutritional-results__definition {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: v.$special_dark-grey;
+  text-transform: lowercase;
+}
+
+.nutritional-results__cost-product {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+}

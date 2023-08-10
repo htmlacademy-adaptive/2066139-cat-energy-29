@@ -1,0 +1,19 @@
+@use "../../global/variables.scss" as v;
+
+.comment-text__title {
+  margin-bottom: 38px;
+}
+
+.comment-text__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: v.$special_dark-grey;
+  text-transform: uppercase;
+  border: none;
+  outline: 1px solid v.$border-field;
+  resize: none;
+}
