@@ -1,14 +1,28 @@
 @use "../../global/variables.scss" as v;
 
 .program-nutrition-form__inner-header {
-  padding-bottom: 39px;
+  // Для бесшовного перехода от планшета к десктопу max-width = 1439px
+  @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
+    padding: 0 40px;
+  }
 }
 
 .program-nutrition-form__title {
   margin: 0;
   margin-bottom: 37px;
   font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .program-nutrition-form__description {
@@ -16,11 +30,57 @@
   margin: 0;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 330px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program-nutrition-form__data-form {
+  // Для бесшовного перехода от планшета к десктопу max-width = 1439px
+  @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
+    padding: 0 40px;
+  }
+}
+
+.program-form__base-info {
+  padding-top: 39px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 66px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+  }
+}
+
+.program-form__cat-param-input {
+  margin-bottom: 24px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 569px;
+    margin: 0 81px 0 0;
+  }
 }
 
 .cat-nutrition {
-  padding-top: 22px;
-  padding-bottom: 19px;
+  padding: 22px 0 19px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 23px 27px 27px;
+    outline: 1px solid v.$border-field;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-grow: 1;
+  }
 }
 
 .cat-param__list,
@@ -40,12 +100,23 @@
 }
 
 .owner-data {
-  padding-top: 26px;
-  padding-bottom: 24px;
+  padding: 26px 0 24px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 75px 0 65px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 69px 0 67px;
+  }
 }
 
 .owner-data__title {
   margin-bottom: 35px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .owner-data__label:not(:last-child) {
@@ -53,15 +124,27 @@
 }
 
 .program-form__comment {
-  padding-bottom: 40px;
+  padding-bottom: 23px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 53px;
+  }
 }
 
 .additionally {
   padding-bottom: 34px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 53px;
+  }
 }
 
 .additionally__title {
   margin-bottom: 34px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .additionally__item:not(:last-child) {
@@ -70,6 +153,10 @@
 
 .program-form__inner-footer {
   text-align: center;
+
+  @media (min-width: v.$tablet-width) {
+    text-align: left;
+  }
 }
 
 .program-form__button {
@@ -77,10 +164,27 @@
   margin-bottom: 21px;
   font-family: inherit;
   border: none;
+
+  @media (min-width: v.$tablet-width) {
+    width: 282px;
+    margin-right: 64px;
+    margin-bottom: 0;
+    padding: 16px 0;
+    font-size: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+  }
 }
 
 .program-form__legend {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+  }
 }

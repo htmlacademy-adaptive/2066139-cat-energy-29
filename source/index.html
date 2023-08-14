@@ -8,16 +8,16 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--absolute container">
       <a class="main-header__logo-link" href="index.html" aria-current="page">
-        <img src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
+        <img class="main-header__logo" src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
         <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper container">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--current" href="index.html" aria-current="page">Главная</a>
@@ -35,7 +35,7 @@
 
     <main class="main-container">
       <h1 class="visually-hidden">Магазин по продаже изумительного кошачьего корма</h1>
-      <section class="promo-product">
+      <section class="promo-product container">
         <div class="promo-product__promo-text">
           <h2 class="promo-product__title title-block title-block--secondary-white">Функциональное питание для котов</h2>
           <p class="promo-product__slogan">Занялся собой? Займись котом!</p>
@@ -79,29 +79,33 @@
           </li>
         </ul>
       </section>
-      <section class="nutritional-results container">
+      <section class="nutritional-results">
         <h2 class="nutritional-results__title title-block">Живой пример</h2>
-        <p class="nutritional-results__description description-text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <dl class="nutritional-results__list">
-          <div class="nutritional-results__item">
-            <dt class="nutritional-results__param">5 Кг</dt>
-            <dd class="nutritional-results__definition">Снижение веса</dd>
+        <div class="nutritional-results__wrapper container">
+          <p class="nutritional-results__description description-text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="nutritional-results__total-wrapper">
+            <dl class="nutritional-results__list">
+              <div class="nutritional-results__item">
+                <dt class="nutritional-results__param">5 Кг</dt>
+                <dd class="nutritional-results__definition">Снижение веса</dd>
+              </div>
+              <div class="nutritional-results__item">
+                <dt class="nutritional-results__param">60 дней</dt>
+                <dd class="nutritional-results__definition">Затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="nutritional-results__cost-product">Затраты на питание: 15 000 РУБ.</p>
           </div>
-          <div class="nutritional-results__item">
-            <dt class="nutritional-results__param">60 дней</dt>
-            <dd class="nutritional-results__definition">Затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="nutritional-results__cost-product">Затраты на питание: 15 000 РУБ.</p>
+        </div>
         <div class="slider-compare-cat">
           <ul class="slider-compare-cat__list">
             <li class="slider-compare-cat__item cat-item">
-              <img class="cat-item__image" src="img/cat-fat.png" width="280" height="256" alt="Кот с ожирением">
+              <img class="cat-item__image-1" src="img/cat-fat.png" width="280" height="256" alt="Кот с ожирением">
             </li>
             <li class="slider-compare-cat__item cat-item">
-              <img class="cat-item__image" src="img/cat-thin.png" width="280" height="256" alt="Худой кот">
+              <img class="cat-item__image-2" src="img/cat-thin.png" width="280" height="256" alt="Худой кот">
             </li>
           </ul>
           <div class="slider-compare-cat__curtain-wrapper">
@@ -118,9 +122,9 @@
       <h2 class="visually-hidden">Контакты</h2>
       <section class="main-footer__address address">
         <h3 class="visually-hidden">Почтовый адрес</h3>
-        <div class="address__contacts contacts container">
-          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-          <address class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="address__contacts address__contacts--alt container">
+          <b class="address__title">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="address__text">ул.&nbspБольшая Конюшенная, д.&nbsp19/8 <span class="address__city">Санкт-Петербург</span></address>
         </div>
         <div class="address__map location">
           <iframe class="location__map"
@@ -132,7 +136,7 @@
       </section>
       <section class="main-footer__social social container">
         <h3 class="visually-hidden">Ссылки на соцсети</h3>
-        <a class="main-footer__logo-footer-text" href="index.html" aria-current="page">
+        <a class="social__logo-link" href="index.html" aria-current="page">
           <img src="img/logo-footer-text.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="social__list">

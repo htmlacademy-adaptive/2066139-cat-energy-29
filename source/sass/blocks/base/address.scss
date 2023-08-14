@@ -1,12 +1,34 @@
 @use "../../global/variables.scss" as v;
 
+.address {
+  position: relative;
+}
+
 .address__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 26px;
   padding-bottom: 26px;
   background-color: v.$basic-grey;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 60px 79px;
+  }
+
+  &--alt {
+    background-color: v.$basic-white;
+  }
 }
 
-.contacts__title {
+.address__title {
   display: inline-block;
   max-width: 140px;
   font-size: 16px;
@@ -14,13 +36,29 @@
   font-weight: 400;
   color: v.$basic-black-alt;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
-.contacts__text {
+.address__text {
   max-width: 140px;
   margin: 0;
   font-family: "Lato", sans-serif;
   font-style: normal;
   line-height: 20px;
   color: v.$special_dark-grey;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 157px;
+    font-size: 16px;
+    text-align: end;
+
+    .address__city {
+      display: block;
+      margin-top: 20px;
+    }
+  }
 }

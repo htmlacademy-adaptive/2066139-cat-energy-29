@@ -1,3 +1,13 @@
+@use "../../global/variables.scss" as v;
+
 .main-inner-program-nutrition {
   padding: 27px 0 32px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 64px 0 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 74px 0 82px;
+  }
 }

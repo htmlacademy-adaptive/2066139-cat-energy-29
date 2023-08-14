@@ -1,0 +1,15 @@
+@use "../../global/variables.scss" as v;
+
+.location__map {
+  display: block;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: v.$tablet-width) {
+    height: 400px;
+  }
+}
+
+.location__image {
+  display: none;
+}

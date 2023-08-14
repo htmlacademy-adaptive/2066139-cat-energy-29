@@ -5,10 +5,15 @@
   line-height: 18px;
   color: v.$special_dark-grey;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .data-label {
   display: inline-block;
+  width: 100%;
 
   @include text-style;
 }

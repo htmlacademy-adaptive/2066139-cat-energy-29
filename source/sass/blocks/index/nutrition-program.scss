@@ -1,30 +1,61 @@
 @use "../../global/variables.scss" as v;
 
 .nutrition-program {
-  width: 100%;
   padding: 30px 20px 18px;
-  box-sizing: border-box;
   background-color: v.$basic-grey;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 81px 63px 53px 53px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 41px 61px 55px 52px;
+  }
 }
 
 .nutrition-program__title {
-  margin-left: 70px;
-  margin-bottom: 29px;
+  margin: 0 0 29px 70px;
   font-size: 24px;
+  font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 77px 0 73px 162px;
+  }
 }
 
 .nutrition-program__description {
   margin-bottom: 15px;
+  min-width: 227px;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: 23px;
-    background-color: v.$index-line-nutrition;
+  @media (max-width: v.$mobile-width-only) {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 23px;
+      background-color: v.$index-line;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 340px;
+    margin-bottom: 48px;
+    color: v.$basic-black;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 457px;
+    margin-bottom: 23px;
   }
 }
 
@@ -34,4 +65,9 @@
   color: v.$basic-black;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }

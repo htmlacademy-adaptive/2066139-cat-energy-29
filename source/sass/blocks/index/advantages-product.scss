@@ -1,7 +1,30 @@
+@use "../../global/variables.scss" as v;
+
 .advantages-product {
   padding-bottom: 49px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 47px;
+  }
 }
 
 .advantages-product__title {
   margin-bottom: 40px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.advantages-product__list {
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 37px 136px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-template-columns: repeat(4, auto);
+    gap: 77px;
+  }
 }
