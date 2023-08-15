@@ -1,16 +1,52 @@
 @use "../../global/variables.scss" as v;
 
+@media (min-width: v.$tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+  }
+}
+
 .site-nav {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+  }
 }
 
 .site-nav__item {
   text-align: center;
+
+  @media (max-width: v.$mobile-width-only) {
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 1px;
+      background-color: v.$index-line-nav;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
 }
 
 .site-nav__link {
+  position: relative;
   display: block;
   padding: 22px 0 24px;
   font-size: 20px;
@@ -18,4 +54,29 @@
   color: v.$basic-black;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 13px 0;
+
+    &--current::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      content: "";
+      height: 2px;
+      background-color: v.$basic-green;
+    }
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .main-header--absolute .site-nav__link {
+    padding: 16px 0 13px;
+    color: v.$basic-white;
+
+    &--current::after {
+      background-color: v.$basic-white;
+    }
+  }
 }

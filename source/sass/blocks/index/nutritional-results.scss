@@ -3,25 +3,76 @@
 .nutritional-results {
   padding-top: 25px;
   padding-bottom: 40px;
+  background-color: v.$index-nutritional-results;
+
+  @media (min-width: v.$tablet-width) {
+    background-color: v.$basic-white;
+  }
 }
 
 .nutritional-results__title {
-  margin-bottom: 40px;
+  margin: 0 0 40px 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin: 0 0 60px 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 0 76px 110px;
+  }
+}
+
+.nutritional-results__wrapper {
+  @media (min-width: v.$desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+    background-color: v.$basic-grey;
+  }
 }
 
 .nutritional-results__description {
   margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.nutritional-results__total-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 250px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
 .nutritional-results__list {
   margin: 0;
-  margin-bottom: 20px;
 }
 
 .nutritional-results__param {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .nutritional-results__definition {
@@ -31,12 +82,21 @@
   line-height: 12px;
   color: v.$special_dark-grey;
   text-transform: lowercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .nutritional-results__cost-product {
   margin: 0;
-  margin-bottom: 20px;
   text-align: center;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

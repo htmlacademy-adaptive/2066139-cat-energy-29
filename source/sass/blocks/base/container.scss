@@ -1,3 +1,13 @@
+@use "../../global/variables.scss" as v;
+
 .container {
   padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 110px;
+  }
 }

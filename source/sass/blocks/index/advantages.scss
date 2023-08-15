@@ -7,7 +7,9 @@
 }
 
 .advantages__item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media (max-width: v.$mobile-width-only) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }

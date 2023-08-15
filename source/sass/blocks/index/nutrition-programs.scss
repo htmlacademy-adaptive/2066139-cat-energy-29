@@ -1,16 +1,46 @@
+@use "../../global/variables.scss" as v;
+
 .nutrition-programs {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 82px;
+    padding-bottom: 71px;
+  }
 }
 
 .nutrition-programs__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
 }
 
 .nutrition-programs__item {
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

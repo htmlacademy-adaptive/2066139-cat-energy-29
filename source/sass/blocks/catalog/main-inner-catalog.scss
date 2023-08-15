@@ -1,9 +1,31 @@
+@use "../../global/variables.scss" as v;
+
 .main-inner-catalog {
   padding-top: 21px;
   padding-bottom: 35px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
 }
 
 .main-inner-catalog__title {
   margin-bottom: 41px;
   padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 163px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 165px;
+    padding: 0 110px;
+  }
 }

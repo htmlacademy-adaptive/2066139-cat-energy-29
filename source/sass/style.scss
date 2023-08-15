@@ -15,7 +15,6 @@
 @use "./blocks/base/main-container.scss";
 @use "./blocks/base/title-block.scss";
 @use "./blocks/base/description-text.scss";
-@use "./blocks/base/comment-text.scss";
 
 /* FOOTER */
 @use "./blocks/base/main-footer.scss";
@@ -25,26 +24,28 @@
 
 /* INDEX */
 @use "./blocks/index/promo-product.scss";
-@use "./blocks//index/nutrition-programs.scss";
-@use "./blocks//index/nutrition-program.scss";
-@use "./blocks//index/advantages-product.scss";
-@use "./blocks//index/advantages.scss";
-@use "./blocks//index/nutritional-results.scss";
-@use "./blocks//index/slider-compare-cat.scss";
+@use "./blocks/index/nutrition-programs.scss";
+@use "./blocks/index/nutrition-program.scss";
+@use "./blocks/index/advantages-product.scss";
+@use "./blocks/index/advantages.scss";
+@use "./blocks/index/nutritional-results.scss";
+@use "./blocks/index/slider-compare-cat.scss";
 
 /* CATALOG*/
 @use "./blocks/catalog/main-inner-catalog.scss";
-@use "./blocks//catalog/catalog-product.scss";
-@use "./blocks//catalog/cat-product.scss";
-@use "./blocks//catalog/product-card.scss";
-@use "./blocks//catalog/additionally-product.scss";
-@use "./blocks//catalog/additionally-product-card.scss";
-@use "./blocks//catalog/gift-block.scss";
+@use "./blocks/catalog/catalog-product.scss";
+@use "./blocks/catalog/cat-product.scss";
+@use "./blocks/catalog/product-card.scss";
+@use "./blocks/catalog/additionally-catalog.scss";
+@use "./blocks/catalog/additionally-product.scss";
+@use "./blocks/catalog/additionally-product-card.scss";
+@use "./blocks/catalog/gift-block.scss";
 
 /* FORM */
-@use "./blocks//form/title-form.scss";
+@use "./blocks/form/title-form.scss";
 @use "./blocks/form/main-inner-program-nutrition.scss";
-@use "./blocks//form/program-nutrition-form.scss";
-@use "./blocks//form/data-label.scss";
-@use "./blocks//form/control-label.scss";
-@use "./blocks//form/control-input.scss";
+@use "./blocks/form/program-nutrition-form.scss";
+@use "./blocks/form/data-label.scss";
+@use "./blocks/form/control-label.scss";
+@use "./blocks/form/control-input.scss";
+@use "./blocks/form/comment-text.scss";

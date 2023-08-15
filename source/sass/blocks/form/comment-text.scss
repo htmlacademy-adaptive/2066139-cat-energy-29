@@ -2,6 +2,14 @@
 
 .comment-text__title {
   margin-bottom: 38px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .comment-text__textarea {
@@ -16,4 +24,10 @@
   border: none;
   outline: 1px solid v.$border-field;
   resize: none;
+
+  @media (min-width: v.$tablet-width) {
+    max-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

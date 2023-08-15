@@ -1,12 +1,9 @@
-.additionally-product {
-  padding-top: 25px;
-}
+@use "../../global/variables.scss" as v;
 
-.additionally-product__title {
-  margin: 0;
-  margin-bottom: 36px;
-  font-size: 24px;
-  line-height: 24px;
+.additionally-product {
+  @media (min-width: v.$desktop-width) {
+    grid-row: 2/3;
+  }
 }
 
 .additionally-product__list {

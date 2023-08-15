@@ -8,25 +8,25 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header container">
       <a class="main-header__logo-link" href="index.html" aria-current="page">
-        <img src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
+        <img class="main-header__logo" src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
         <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper container">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-nav">
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--current" href="index.html">Главная</a>
+              <a class="site-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="form.html" aria-current="page">Подбор программы</a>
+              <a class="site-nav__link site-nav__link--current" href="form.html" aria-current="page">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -40,59 +40,61 @@
           <p class="program-nutrition-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </header>
         <form class="program-nutrition-form__data-form program-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="program-form__cat-param-input cat-param" role="group" aria-labelledby="cat-data-title">
-            <h2 class="visually-hidden" id="cat-data-title">Параметры кота</h2>
-            <ul class="cat-param__list">
-              <li class="cat-param__item">
-                <label class="cat-param__label data-label">
-                  <span class="data-label__text">
-                    Имя:*
-                  </span>
-                  <input class="data-label__input-box field-data" type="text" name="cat-name" value="Барсик" placeholder="Введите имя котика" required>
-                </label>
-              </li>
-              <li class="cat-param__item">
-                <label class="cat-param__label data-label">
-                  <span class="data-label__text">
-                    Вес:*
-                  </span>
-                  <input class="data-label__input-box field-data" type="number" name="cat-weight" value="7" placeholder="Введите вес котика" required>
-                </label>
-              </li>
-              <li class="cat-param__item">
-                <label class="cat-param__label data-label">
-                  <span class="data-label__text">
-                    Возраст (лет):
-                  </span>
-                  <input class="data-label__input-box field-data" type="number" name="cat-age" value="7" placeholder="Введите возраст котика">
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div class="program-form__cat-nutrition-input cat-nutrition" role="group" aria-labelledby="program-nutrition-title">
-            <h2 class="visually-hidden" id="program-nutrition-title">Выбор программы питания</h2>
-            <ul class="cat-nutrition__list">
-              <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label control-label">
-                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-loss" checked>
-                  Похудение
-                </label>
-              </li>
-              <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label control-label">
-                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-gain">
-                  Набор массы
-                </label>
-              </li>
-              <li class="cat-nutrition__item">
-                <label class="cat-nutrition__label control-label">
-                  <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="dont-know-nutrition">
-                  Не знаю (нужен ваш совет)
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div class="program-form__owner-data-input owner-data" role="group" aria-labelledby="cat-owner-title">
+          <section class="program-form__base-info">
+            <div class="program-form__cat-param-input cat-param" role="group" aria-labelledby="cat-data-title">
+              <h2 class="visually-hidden" id="cat-data-title">Параметры кота</h2>
+              <ul class="cat-param__list">
+                <li class="cat-param__item">
+                  <label class="cat-param__label data-label">
+                    <span class="data-label__text">
+                      Имя:*
+                    </span>
+                    <input class="data-label__input-box field-data" type="text" name="cat-name" value="Барсик" placeholder="Введите имя котика" required>
+                  </label>
+                </li>
+                <li class="cat-param__item">
+                  <label class="cat-param__label data-label">
+                    <span class="data-label__text">
+                      Вес:*
+                    </span>
+                    <input class="data-label__input-box field-data" type="number" name="cat-weight" value="7" placeholder="Введите вес котика" required>
+                  </label>
+                </li>
+                <li class="cat-param__item">
+                  <label class="cat-param__label data-label">
+                    <span class="data-label__text">
+                      Возраст (лет):
+                    </span>
+                    <input class="data-label__input-box field-data" type="number" name="cat-age" value="7" placeholder="Введите возраст котика">
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="program-form__cat-nutrition-input cat-nutrition" role="group" aria-labelledby="program-nutrition-title">
+              <h2 class="visually-hidden" id="program-nutrition-title">Выбор программы питания</h2>
+              <ul class="cat-nutrition__list">
+                <li class="cat-nutrition__item">
+                  <label class="cat-nutrition__label control-label">
+                    <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-loss" checked>
+                    Похудение
+                  </label>
+                </li>
+                <li class="cat-nutrition__item">
+                  <label class="cat-nutrition__label control-label">
+                    <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="weight-gain">
+                    Набор массы
+                  </label>
+                </li>
+                <li class="cat-nutrition__item">
+                  <label class="cat-nutrition__label control-label">
+                    <input class="control-label__control-input control-input" type="radio" name="type-of-nutrition" value="dont-know-nutrition">
+                    Не знаю (нужен ваш совет)
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="program-form__owner-data-input owner-data" role="group" aria-labelledby="cat-owner-title">
             <h2 class="owner-data__title title-form" id="cat-owner-title">Контактные данные (владельца кота)</h2>
             <label class="owner-data__label data-label">
               <span class="data-label__text">
@@ -106,12 +108,12 @@
               </span>
               <input class="data-label__input-box field-data field-data--icon-tel" type="tel" name="owner-tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
             </label>
-          </div>
-          <div class="program-form__comment comment-text" role="group" aria-labelledby="comment-title">
+          </section>
+          <section class="program-form__comment comment-text" role="group" aria-labelledby="comment-title">
             <h2 class="comment-text__title title-form" id="comment-title">Комментарий</h2>
             <textarea class="comment-text__textarea" name="comment" spellcheck="true" placeholder="Расскажите обо всех повадках кота" rows="10">Расскажите обо всех повадках кота</textarea>
-          </div>
-          <div class="program-form__additionally-input additionally" role="group" aria-labelledby="additionally-title">
+          </section>
+          <section class="program-form__additionally-input additionally" role="group" aria-labelledby="additionally-title">
             <h2 class="additionally__title title-form" id="additionally-title">Дополнительно</h2>
             <ul class="additionally__list">
               <li class="additionally__item">
@@ -139,7 +141,7 @@
                 </label>
               </li>
             </ul>
-          </div>
+          </section>
           <footer class="program-form__inner-footer">
             <button class="program-form__button button button--secondary" type="submit">Отправить заявку</button>
             <small class="program-form__legend">* — Обязательные поля</small>
@@ -152,9 +154,9 @@
       <h2 class="visually-hidden">Контакты</h2>
       <section class="main-footer__address address">
         <h3 class="visually-hidden">Почтовый адрес</h3>
-        <div class="address__contacts contacts container">
-          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-          <address class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="address__contacts address__contacts--alt container">
+          <b class="address__title">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="address__text">ул.&nbspБольшая Конюшенная, д.&nbsp19/8 <span class="address__city">Санкт-Петербург</span></address>
         </div>
         <div class="address__map location">
           <iframe class="location__map"
@@ -166,7 +168,7 @@
       </section>
       <section class="main-footer__social social container">
         <h3 class="visually-hidden">Ссылки на соцсети</h3>
-        <a class="main-footer__logo-footer-text" href="index.html" aria-current="page">
+        <a class="social__logo-link" href="index.html" aria-current="page">
           <img src="img/logo-footer-text.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="social__list">

@@ -3,17 +3,53 @@
 .promo-product {
   position: relative;
   text-align: center;
+  background:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) center top,
+    url("../img/cat-bg.jpg") center top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 526px;
+    text-align: left;
+    background: none;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 225px;
+    padding-bottom: 183px;
+    text-align: left;
+    background:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) right center,
+      url("../img/cat-bg.jpg") right center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+  }
 }
 
 .promo-product__promo-text {
   margin: 0 0 138px;
   padding: 27px 0 164px;
-  background: v.$basic-green url("../img/cat-bg.jpg") no-repeat center;
-  background-size: cover;
+
+  @media (min-width: v.$tablet-width) {
+    margin: 0;
+    padding: 65px 90px 50px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 0 52px 79px;
+    padding: 0;
+  }
 }
 
 .promo-product__title {
   margin: 0 0 25px;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 420px;
+    margin: 0 0 40px;
+    color: v.$basic-black;
+  }
 }
 
 .promo-product__slogan {
@@ -21,6 +57,13 @@
   line-height: 14px;
   color: v.$basic-white;
   text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 420px;
+    font-size: 20px;
+    line-height: 20px;
+    color: v.$basic-black;
+  }
 }
 
 .promo-product__image {
@@ -28,11 +71,37 @@
   top: 167px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: v.$tablet-width) {
+    top: auto;
+    bottom: 0;
+    left: 30px;
+    transform: none;
+    z-index: -1;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    top: 143px;
+    left: 557px;
+    z-index: 1;
+  }
 }
 
 .promo-product__button-guide {
   min-width: 280px;
   margin: 0 auto;
+  padding: 11px 0;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-left: 90px;
+    padding: 17px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 79px;
+  }
 }
