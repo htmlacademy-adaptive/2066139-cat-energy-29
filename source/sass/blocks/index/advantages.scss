@@ -12,6 +12,7 @@
 
 .advantages__item {
   position: relative;
+
   @media (max-width: v.$mobile-width-only) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -36,7 +37,7 @@
   }
 }
 
-.advantages__description{
+.advantages__description {
   display: flex;
   column-gap: 20px;
   align-items: center;

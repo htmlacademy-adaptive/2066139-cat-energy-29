@@ -74,7 +74,6 @@
 // Оформление меню на случай выключенного скрипта
 @media (max-width: v.$mobile-width-only) {
   .main-header--nojs {
-
     .main-header__logo-text {
       top: 20%;
       transform: translate(-50%, -30%);

@@ -1,6 +1,6 @@
 @use "../../global/variables.scss" as v;
 
-.main-nav__toggle{
+.main-nav__toggle {
   position: relative;
   display: block;
   width: 24px;
@@ -24,9 +24,10 @@
 }
 
 .main-nav--opened .toggle__line {
-  width: 0px;
+  width: 0;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -48,7 +49,8 @@
 }
 
 .main-nav--closed .toggle__line {
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     left: 0;

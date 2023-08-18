@@ -12,11 +12,11 @@
 
 .product-card {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 20px 0 25px;
 
   @media (min-width: v.$tablet-width) {
-    grid-template: repeat(3,auto) / auto;
+    grid-template: repeat(3, auto) / auto;
     padding: 161px 37px 40px;
     background-color: v.$basic-grey;
   }
@@ -171,11 +171,11 @@
     width: 30px;
     margin: 0 auto 23px;
     background:
-      linear-gradient(v.$plus-symbol,v.$plus-symbol),
-      linear-gradient(v.$plus-symbol,v.$plus-symbol);
-    background-position:center;
+      linear-gradient(v.$plus-symbol, v.$plus-symbol),
+      linear-gradient(v.$plus-symbol, v.$plus-symbol);
+    background-position: center;
     background-size: 100% 2px, 2px 100%;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: v.$tablet-width) {
@@ -183,6 +183,7 @@
     margin: 0 auto 23px;
     font-size: 20px;
     line-height: 24px;
+
     &::before {
       height: 60px;
       width: 60px;

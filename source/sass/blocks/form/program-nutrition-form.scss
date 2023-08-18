@@ -6,7 +6,9 @@
     background-position: $x1-poz $y-poz;
     background-size: 100% 2px;
     background-repeat: no-repeat;
-  } @else if $count-line == 2 {
+  }
+
+  @else if $count-line == 2 {
     background:
       linear-gradient(v.$basic-green, v.$basic-green),
       linear-gradient(v.$basic-green, v.$basic-green);
@@ -94,7 +96,8 @@
   padding: 22px 0 19px;
 
   @media (max-width: v.$mobile-width-only) {
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -197,15 +200,18 @@
 
 .program-form__comment {
   padding-bottom: 23px;
+
   @include line-decor-section ($x1-poz:161px, $y-poz:15px);
 
   @media (min-width: v.$tablet-width) {
     padding: 0 70px 65px;
+
     @include line-decor-section ($width: 30px, $x2-poz:292px, $y-poz:20px, $count-line: 2);
   }
 
   @media (min-width: v.$desktop-width) {
     padding: 0 v.$desktop-pd 70px;
+
     @include line-decor-section ($width: 70px, $x2-poz:332px, $y-poz:20px, $count-line: 2);
   }
 }
@@ -246,13 +252,13 @@
   @media (min-width: v.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px
+    gap: 32px;
   }
 
   @media (min-width: v.$desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px
+    gap: 32px;
   }
 }
 

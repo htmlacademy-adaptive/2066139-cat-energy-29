@@ -37,15 +37,15 @@
     padding: 9px 20px;
   }
 
-  &:hover:not(:disabled){
+  &:hover:not(:disabled) {
     outline: 1px solid v.$special_grey;
   }
 
-  &:focus{
+  &:focus {
     outline: 2px solid v.$special_dark-grey;
   }
 
-  &:disabled{
+  &:disabled {
     outline: 2px solid v.$status_error;
   }
 }

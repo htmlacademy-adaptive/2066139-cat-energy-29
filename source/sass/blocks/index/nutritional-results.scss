@@ -154,6 +154,7 @@
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+
     span {
       display: block;
       margin-top: 9px;
@@ -162,6 +163,7 @@
 
   @media (min-width: v.$desktop-width) {
     text-align: left;
+
     span {
       display: inline-block;
       margin-top: 0;

@@ -1,7 +1,6 @@
 @use "../../global/variables.scss" as v;
 
-.catalog-product__list{
-
+.catalog-product__list {
   @media (min-width: v.$desktop-width) {
     // max-width: v.$desktop-width - v.$desktop-pd * 2;
     // margin: 0 auto;
