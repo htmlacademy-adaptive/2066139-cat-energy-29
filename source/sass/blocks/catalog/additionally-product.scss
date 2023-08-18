@@ -6,6 +6,18 @@
   }
 }
 
+.additionally-catalog__product {
+  margin-bottom: 35px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .additionally-product__list {
   margin: 0;
   padding: 0;

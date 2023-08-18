@@ -1,12 +1,14 @@
 @use "../../global/variables.scss" as v;
 
 .main-inner-catalog {
-  padding-top: 21px;
+  padding-top: 27px;
   padding-bottom: 35px;
+  border-top: 1px solid v.$line;
 
   @media (min-width: v.$tablet-width) {
     padding-top: 64px;
-    padding-bottom: 76px;
+    padding-bottom: 75px;
+    border-top: none;
   }
 
   @media (min-width: v.$desktop-width) {
@@ -20,7 +22,7 @@
   padding: 0 20px;
 
   @media (min-width: v.$tablet-width) {
-    margin-bottom: 163px;
+    margin-bottom: 165px;
     padding: 0 30px;
   }
 

@@ -6,6 +6,10 @@
   @media (min-width: v.$tablet-width) {
     padding-bottom: 47px;
   }
+
+  @media (min-width: v.$desktop-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .advantages-product__title {
@@ -19,7 +23,7 @@
 .advantages-product__list {
   @media (min-width: v.$tablet-width) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(204px, 245px));
     gap: 37px 136px;
   }
 

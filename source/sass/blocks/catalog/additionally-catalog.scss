@@ -2,9 +2,19 @@
 
 .additionally-catalog {
   padding-top: 25px;
+  background: linear-gradient(v.$basic-green, v.$basic-green);
+  background-position: 266px 40px;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
 
   @media (min-width: v.$tablet-width) {
     padding-top: 68px;
+    background:
+      linear-gradient(v.$basic-green, v.$basic-green),
+      linear-gradient(v.$basic-green, v.$basic-green);
+    background-size: 30px 2px, 100% 2px;
+    background-position: 0 90px, 448px 90px;
+    background-repeat: no-repeat, no-repeat;
   }
 
   @media (min-width: v.$desktop-width) {
@@ -12,10 +22,13 @@
     grid-template-columns: 1fr 245px;
     column-gap: 79px;
     padding-top: 76px;
+    background-size: 70px 2px, 100% 2px;
+    background-position: 0 98px, 488px 98px;
   }
 }
 
 .additionally-catalog__title {
+  position: relative;
   margin: 0;
   margin-bottom: 36px;
   font-size: 24px;
@@ -24,7 +37,12 @@
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 80px;
+    padding-left: 40px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-left: 0;
   }
 }

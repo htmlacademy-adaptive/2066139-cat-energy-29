@@ -9,6 +9,9 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: transparent;
   }
 }

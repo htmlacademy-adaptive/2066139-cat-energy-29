@@ -10,7 +10,11 @@
   justify-content: space-between;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: v.$basic-grey;
+  background-color: v.$basic-white;
+
+  &--alt {
+    background-color: v.$basic-grey;
+  }
 
   @media (min-width: v.$tablet-width) {
     padding: 60px 70px;
@@ -20,10 +24,8 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    column-gap: 87px;
     padding: 60px 79px;
-  }
-
-  &--alt {
     background-color: v.$basic-white;
   }
 }
@@ -38,6 +40,7 @@
   text-transform: uppercase;
 
   @media (min-width: v.$tablet-width) {
+    max-width: 163px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -60,5 +63,9 @@
       display: block;
       margin-top: 20px;
     }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    text-align: left;
   }
 }
