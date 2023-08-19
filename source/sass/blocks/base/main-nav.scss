@@ -20,7 +20,7 @@
   width: 100%;
   height: 2px;
   background-color: v.$basic-black;
-  transition: 0.3s width;
+  transition: width 0.3s;
 }
 
 .main-nav--opened .toggle__line {
@@ -34,7 +34,7 @@
     width: 100%;
     height: 2px;
     background-color: v.$basic-black;
-    transition: 0.3s transform;
+    transition: transform 0.3s;
   }
 
   &::before {
@@ -57,7 +57,7 @@
     width: 100%;
     height: 2px;
     background-color: v.$basic-black;
-    transition: 0.3s transform;
+    transition: transform 0.3s;
   }
 
   &::before {

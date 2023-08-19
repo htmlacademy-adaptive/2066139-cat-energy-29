@@ -27,11 +27,11 @@
   @media (min-width: v.$tablet-width) {
     &:hover,
     &:focus {
-      color: #3e3e3e;
+      color: v.$logo-company-hover;
     }
 
     &:active {
-      color: #6b6b6b;
+      color: v.$logo-company-active;
     }
   }
 
