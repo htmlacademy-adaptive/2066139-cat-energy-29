@@ -1,11 +1,18 @@
 @use "../../global/variables.scss" as v;
 
 .nutritional-results {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 40px;
   background-color: v.$index-nutritional-results;
 
   @media (min-width: v.$tablet-width) {
+    padding: 45px 0 0;
+    background-color: v.$basic-white;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0;
     background-color: v.$basic-white;
   }
 }
@@ -24,8 +31,7 @@
 
 .nutritional-results__wrapper {
   @media (min-width: v.$desktop-width) {
-    padding-top: 70px;
-    padding-bottom: 75px;
+    padding: 70px 897px 75px 110px;
     background-color: v.$basic-grey;
   }
 }
@@ -45,23 +51,51 @@
 .nutritional-results__total-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  row-gap: 34px;
   margin-bottom: 20px;
 
   @media (min-width: v.$tablet-width) {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 250px;
   }
 
   @media (min-width: v.$desktop-width) {
     flex-direction: column;
+    align-items: flex-start;
+    row-gap: 60px;
     margin-bottom: 0;
   }
 }
 
 .nutritional-results__list {
+  display: flex;
+  justify-content: center;
+  column-gap: 32px;
+  box-sizing: border-box;
   margin: 0;
+
+  @media (min-width: v.$tablet-width) {
+    column-gap: 42px;
+  }
+}
+
+.nutritional-results__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 124px;
+  min-height: 56px;
+  border: 1px solid v.$special_grey;
+  border-radius: 3px;
+
+  @media (min-width: v.$tablet-width) {
+    min-width: 162px;
+    min-height: 72px;
+  }
 }
 
 .nutritional-results__param {
@@ -76,16 +110,37 @@
 }
 
 .nutritional-results__definition {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 77px;
+  height: auto;
   margin: 0;
   font-family: "Lato", sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: v.$special_dark-grey;
+  text-align: center;
   text-transform: lowercase;
+  background-color: v.$index-nutritional-results;
+  transform: translate(-50%, 70%);
 
   @media (min-width: v.$tablet-width) {
+    width: max-content;
+    padding: 0 8px;
     font-size: 14px;
     line-height: 14px;
+    background-color: v.$basic-white;
+    transform: translate(-50%, 50%);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: max-content;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: v.$basic-grey;
+    transform: translate(-50%, 50%);
   }
 }
 
@@ -98,5 +153,21 @@
   @media (min-width: v.$tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    text-align: right;
+
+    span {
+      display: block;
+      margin-top: 9px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    text-align: left;
+
+    span {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 63px;
+    }
   }
 }

@@ -8,13 +8,14 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    margin-bottom: 76px;
+    margin-bottom: 78px;
   }
 }
 
 .comment-text__textarea {
   box-sizing: border-box;
   width: 100%;
+  max-height: 150px;
   padding: 14px;
   font-family: inherit;
   font-size: 16px;
@@ -26,8 +27,25 @@
   resize: none;
 
   @media (min-width: v.$tablet-width) {
-    max-height: 174px;
+    padding: 11px 20px;
+    max-height: 175px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 9px 20px;
+  }
+
+  &:hover:not(:disabled) {
+    outline: 1px solid v.$special_grey;
+  }
+
+  &:focus {
+    outline: 2px solid v.$special_dark-grey;
+  }
+
+  &:disabled {
+    outline: 2px solid v.$status_error;
   }
 }

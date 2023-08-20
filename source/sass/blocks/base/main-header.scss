@@ -3,6 +3,7 @@
 .main-header {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   min-width: 280px;
@@ -13,17 +14,18 @@
     padding-top: 25px;
     padding-bottom: 0;
   }
-}
 
-@media (min-width: v.$desktop-width) {
-  .main-header--absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding-top: 56px;
-    z-index: 5;
+  @media (min-width: v.$desktop-width) {
+    padding-top: 55px;
+
+    &.main-header--absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 100%;
+      z-index: 5;
+    }
   }
 }
 
@@ -40,6 +42,14 @@
 
     .main-header__logo {
       margin-right: 13px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
     }
   }
 }
@@ -58,5 +68,32 @@
 
   @media (min-width: v.$desktop-width) {
     padding: 19px 0;
+  }
+}
+
+// Оформление меню на случай выключенного скрипта
+@media (max-width: v.$mobile-width-only) {
+  .main-header--nojs {
+    .main-header__logo-text {
+      top: 20%;
+      transform: translate(-50%, -30%);
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__wrapper.main-nav__wrapper {
+      position: static;
+      transform: translateY(0);
+    }
+
+    .main-nav__list {
+      display: flex;
+    }
+
+    .site-nav__item::before {
+      content: none;
+    }
   }
 }

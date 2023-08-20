@@ -4,12 +4,80 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: v.$tablet-width) {
+    counter-reset: advantages 0;
+  }
 }
 
 .advantages__item {
+  position: relative;
+
   @media (max-width: v.$mobile-width-only) {
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 40px 0 57px;
+
+    &::after {
+      counter-increment: advantages 1;
+      content: counter(advantages);
+      position: absolute;
+      top: 0;
+      left: 118px;
+      font-family: inherit;
+      font-size: 280px;
+      line-height: 280px;
+      color: v.$basic-grey;
+      z-index: -1;
+    }
+  }
+}
+
+.advantages__description {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--icon-leaf::before {
+    background: v.$basic-green url("../img/icon-leaf.svg") no-repeat center;
+    background-size: 25px 28px;
+  }
+
+  &--icon-brew::before {
+    background: v.$basic-green url("../img/icon-brew.svg") no-repeat center;
+    background-size: 26px 29px;
+  }
+
+  &--icon-eat::before {
+    background: v.$basic-green url("../img/icon-eat.svg") no-repeat center;
+    background-size: 25px 30px;
+  }
+
+  &--icon-clock::before {
+    background: v.$basic-green url("../img/icon-clock.svg") no-repeat center;
+    background-size: 26px 31px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
     }
   }
 }

@@ -12,8 +12,24 @@
   text-transform: uppercase;
   background-color: v.$basic-grey;
 
+  &:hover {
+    background-color: v.$special_grey-light;
+  }
+
+  &:active:not(:disabled) {
+    color: rgba($color: v.$special_dark-grey, $alpha: 0.3);
+  }
+
   &--secondary {
     color: v.$basic-white;
     background-color: v.$basic-green;
+
+    &:hover {
+      background-color: v.$basic-green-alt;
+    }
+
+    &:active:not(:disabled) {
+      color: rgba($color: v.$basic-white, $alpha: 0.3);
+    }
   }
 }

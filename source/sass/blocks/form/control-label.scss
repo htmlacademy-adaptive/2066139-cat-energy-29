@@ -1,12 +1,18 @@
 @use "../../global/variables.scss" as v;
 
 .control-label {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
   font-size: 16px;
   line-height: 18px;
   color: v.$special_dark-grey;
   text-transform: uppercase;
+  word-break: break-word;
+  cursor: pointer;
 
   @media (min-width: v.$tablet-width) {
     font-size: 20px;
+    column-gap: 20px;
   }
 }

@@ -1,1 +1,56 @@
-// in future
+@use "../../global/variables.scss" as v;
+
+.control-input {
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border: 1px solid v.$special_grey;
+  background-color: v.$basic-white;
+  appearance: none;
+  cursor: pointer;
+
+  @media (min-width: v.$tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    border: 1px solid v.$checkbox-hover;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.control-input[type="checkbox"]:checked {
+  background: v.$basic-white url("../img/icon-check.svg") no-repeat center;
+  background-size: 18px 14px;
+
+  @media (min-width: v.$tablet-width) {
+    background-size: 24px 19px;
+  }
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: v.$basic-green;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: v.$tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}

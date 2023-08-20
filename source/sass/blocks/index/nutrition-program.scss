@@ -1,15 +1,68 @@
 @use "../../global/variables.scss" as v;
 
 .nutrition-program {
+  position: relative;
   padding: 30px 20px 18px;
   background-color: v.$basic-grey;
 
+  &--slim::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    width: 50px;
+    height: 53px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+  }
+
+  &--pro::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+  }
+
   @media (min-width: v.$tablet-width) {
-    padding: 81px 63px 53px 53px;
+    padding: 77px 316px 53px 53px;
+
+    &--slim::before {
+      top: 81px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 211px;
+    }
+
+    &--pro::before {
+      top: 91px;
+      left: auto;
+      right: 29px;
+      width: 268px;
+      height: 200px;
+    }
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 41px 61px 55px 52px;
+    padding: 77px 61px 55px 52px;
+
+    &--slim::before {
+      top: 41px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 106px;
+    }
+
+    &--pro::before {
+      top: 47px;
+      left: auto;
+      right: 33px;
+      width: 134px;
+      height: 100px;
+    }
   }
 }
 
@@ -43,7 +96,7 @@
       width: 100%;
       height: 1px;
       margin-top: 23px;
-      background-color: v.$index-line;
+      background-color: v.$line;
     }
   }
 
@@ -60,11 +113,23 @@
 }
 
 .nutrition-program__link {
+  display: inline-block;
+  padding: 4px 0;
   font-size: 16px;
   line-height: 16px;
   color: v.$basic-black;
   text-decoration: none;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 12px;
+    margin-left: 15px;
+    background: url("../img/icon-arrow-right.svg") no-repeat;
+    background-size: 24px 12px;
+  }
 
   @media (min-width: v.$tablet-width) {
     font-size: 20px;

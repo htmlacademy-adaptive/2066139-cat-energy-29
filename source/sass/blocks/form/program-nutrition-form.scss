@@ -1,9 +1,27 @@
 @use "../../global/variables.scss" as v;
 
+@mixin line-decor-section($width: 100%, $x1-poz: 0, $x2-poz: 0, $y-poz, $count-line: 1) {
+  @if $count-line == 1 {
+    background: linear-gradient(v.$basic-green, v.$basic-green);
+    background-position: $x1-poz $y-poz;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+  }
+
+  @else if $count-line == 2 {
+    background:
+      linear-gradient(v.$basic-green, v.$basic-green),
+      linear-gradient(v.$basic-green, v.$basic-green);
+    background-size: $width 2px, 100% 2px;
+    background-position: $x1-poz $y-poz, $x2-poz $y-poz;
+    background-repeat: no-repeat, no-repeat;
+  }
+}
+
 .program-nutrition-form__inner-header {
   // Для бесшовного перехода от планшета к десктопу max-width = 1439px
   @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
-    padding: 0 40px;
+    padding: 0 70px;
   }
 }
 
@@ -21,7 +39,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
 }
 
@@ -38,22 +56,25 @@
   }
 }
 
+/*
 .program-nutrition-form__data-form {
   // Для бесшовного перехода от планшета к десктопу max-width = 1439px
   @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
     padding: 0 40px;
   }
 }
+*/
 
 .program-form__base-info {
   padding-top: 39px;
 
   @media (min-width: v.$tablet-width) {
-    padding-top: 66px;
+    padding: 66px 70px 0;
   }
 
   @media (min-width: v.$desktop-width) {
     display: flex;
+    padding: 66px v.$desktop-pd 0;
   }
 }
 
@@ -71,7 +92,26 @@
 }
 
 .cat-nutrition {
+  position: relative;
   padding: 22px 0 19px;
+
+  @media (max-width: v.$mobile-width-only) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background-color: v.$line;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+  }
 
   @media (min-width: v.$tablet-width) {
     padding: 23px 27px 27px;
@@ -93,41 +133,98 @@
 
 .cat-param__item:not(:last-child) {
   margin-bottom: 14px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .cat-nutrition__item:not(:last-child) {
   margin-bottom: 13px;
 }
 
-.owner-data {
-  padding: 26px 0 24px;
+.program-form__owner-data-input {
+  @include line-decor-section ($x1-poz:227px, $y-poz:42px);
 
   @media (min-width: v.$tablet-width) {
-    padding: 75px 0 65px;
+    @include line-decor-section ($width: 30px, $x2-poz:622px, $y-poz:89px, $count-line: 2);
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 69px 0 67px;
+    @include line-decor-section ($width: 70px, $x2-poz:662px, $y-poz:89px, $count-line: 2);
+  }
+}
+
+.owner-data {
+  padding-top: 26px;
+  padding-bottom: 24px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 65px 70px 65px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 70px v.$desktop-pd;
   }
 }
 
 .owner-data__title {
+  max-width: 190px;
   margin-bottom: 35px;
 
   @media (min-width: v.$tablet-width) {
+    max-width: 100%;
     margin-bottom: 76px;
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-column: 1/-1;
   }
 }
 
 .owner-data__label:not(:last-child) {
   margin-bottom: 14px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .program-form__comment {
   padding-bottom: 23px;
 
+  @include line-decor-section ($x1-poz:161px, $y-poz:15px);
+
   @media (min-width: v.$tablet-width) {
-    padding-bottom: 53px;
+    padding: 0 70px 65px;
+
+    @include line-decor-section ($width: 30px, $x2-poz:292px, $y-poz:20px, $count-line: 2);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 v.$desktop-pd 70px;
+
+    @include line-decor-section ($width: 70px, $x2-poz:332px, $y-poz:20px, $count-line: 2);
+  }
+}
+
+.program-form__additionally-input {
+  @include line-decor-section ($x1-poz:181px, $y-poz:14px);
+
+  @media (min-width: v.$tablet-width) {
+    @include line-decor-section ($width: 30px, $x2-poz:322px, $y-poz:20px, $count-line: 2);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    @include line-decor-section ($width: 70px, $x2-poz:362px, $y-poz:20px, $count-line: 2);
   }
 }
 
@@ -135,7 +232,11 @@
   padding-bottom: 34px;
 
   @media (min-width: v.$tablet-width) {
-    padding-bottom: 53px;
+    padding: 0 70px 54px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 v.$desktop-pd 61px;
   }
 }
 
@@ -147,15 +248,38 @@
   }
 }
 
+.additionally__list {
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
 .additionally__item:not(:last-child) {
   margin-bottom: 13px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .program-form__inner-footer {
   text-align: center;
 
   @media (min-width: v.$tablet-width) {
+    padding: 0 70px;
     text-align: left;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 v.$desktop-pd;
   }
 }
 

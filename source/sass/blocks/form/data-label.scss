@@ -12,24 +12,70 @@
 }
 
 .data-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 100%;
 
   @include text-style;
 }
 
 .data-label__text {
+  flex-shrink: 0;
   margin-right: 13px;
 }
 
 .field-data {
+  flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
   padding: 14px 15px 13px;
   font-family: inherit;
 
   @include text-style;
-
   border: none;
   outline: 1px solid v.$border-field;
+
+  &:hover:not(:disabled) {
+    outline: 1px solid v.$special_grey;
+  }
+
+  &:focus {
+    outline: 2px solid v.$special_dark-grey;
+  }
+
+  &:disabled {
+    outline: 2px solid v.$status_error;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 11px 20px;
+  }
+
+  &--icon-email {
+    padding-right: 40px;
+    background: url("../img/icon-email.svg") no-repeat right 12px center;
+    background-size: 20px 20px;
+
+    @media (min-width: v.$tablet-width) {
+      background-position: right 14px center;
+    }
+
+    @media (min-width: v.$desktop-width) {
+      background-position: right 16px center;
+    }
+  }
+
+  &--icon-tel {
+    padding-right: 40px;
+    background: url("../img/icon-phone.svg") no-repeat right 12px center;
+    background-size: 20px 20px;
+
+    @media (min-width: v.$tablet-width) {
+      background-position: right 14px center;
+    }
+
+    @media (min-width: v.$desktop-width) {
+      background-position: right 16px center;
+    }
+  }
 }
