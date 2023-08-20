@@ -51,22 +51,22 @@
   }
 
   &--icon-leaf::before {
-    background: v.$basic-green url("../img/icon-leaf.svg") no-repeat center;
+    background: v.$basic-green url("../img/icons/icon-leaf.svg") no-repeat center;
     background-size: 25px 28px;
   }
 
   &--icon-brew::before {
-    background: v.$basic-green url("../img/icon-brew.svg") no-repeat center;
+    background: v.$basic-green url("../img/icons/icon-brew.svg") no-repeat center;
     background-size: 26px 29px;
   }
 
   &--icon-eat::before {
-    background: v.$basic-green url("../img/icon-eat.svg") no-repeat center;
+    background: v.$basic-green url("../img/icons/icon-eat.svg") no-repeat center;
     background-size: 25px 30px;
   }
 
   &--icon-clock::before {
-    background: v.$basic-green url("../img/icon-clock.svg") no-repeat center;
+    background: v.$basic-green url("../img/icons/icon-clock.svg") no-repeat center;
     background-size: 26px 31px;
   }
 
