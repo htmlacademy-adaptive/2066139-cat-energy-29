@@ -12,7 +12,8 @@
     left: 20px;
     width: 50px;
     height: 53px;
-    background: url("../img/icon-cat-slim.svg") no-repeat;
+    background: url("../img/icons/icon-cat-slim.svg") no-repeat;
+    background-size: 50px 53px;
   }
 
   &--pro::before {
@@ -22,7 +23,8 @@
     left: 13px;
     width: 67px;
     height: 50px;
-    background: url("../img/icon-cat-pro.svg") no-repeat;
+    background: url("../img/icons/icon-cat-pro.svg") no-repeat;
+    background-size: 67px 50px;
   }
 
   @media (min-width: v.$tablet-width) {
@@ -34,6 +36,7 @@
       right: 63px;
       width: 200px;
       height: 211px;
+      background-size: 200px 211px;
     }
 
     &--pro::before {
@@ -42,6 +45,7 @@
       right: 29px;
       width: 268px;
       height: 200px;
+      background-size: 268px 200px;
     }
   }
 
@@ -54,14 +58,15 @@
       right: auto;
       width: 100px;
       height: 106px;
+      background-size: 100px 106px;
     }
 
     &--pro::before {
       top: 47px;
-      left: auto;
-      right: 33px;
+      left: 33px;
       width: 134px;
       height: 100px;
+      background-size: 134px 100px;
     }
   }
 }
@@ -81,7 +86,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    margin: 77px 0 73px 162px;
+    margin: 0 0 73px 162px;
   }
 }
 
@@ -113,7 +118,9 @@
 }
 
 .nutrition-program__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
   padding: 4px 0;
   font-size: 16px;
   line-height: 16px;
@@ -123,11 +130,9 @@
 
   &::after {
     content: "";
-    display: inline-block;
     width: 24px;
     height: 12px;
-    margin-left: 15px;
-    background: url("../img/icon-arrow-right.svg") no-repeat;
+    background: url("../img/icons/icon-arrow-right.svg") no-repeat;
     background-size: 24px 12px;
   }
 

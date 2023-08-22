@@ -14,10 +14,16 @@
     height: 302px;
     background:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) center top,
-      url("../img/cat-bg.jpg") center;
+      url("../img/index/cat-bg-phone.jpg") center;
     background-repeat: no-repeat, no-repeat;
-    background-size: cover;
+    background-size: cover, contain;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/index/cat-bg-phone@2x.jpg");
+    }
   }
 
   @media (min-width: v.$tablet-width) {
@@ -41,7 +47,17 @@
       height: 100%;
       left: auto;
       right: 0;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/index/cat-bg-desktop.jpg");
       background-position: center top, right center;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/index/cat-bg-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -62,7 +78,7 @@
 }
 
 .promo-product__title {
-  max-width: 390px;
+  max-width: 270px;
   margin: 0 auto 25px;
 
   @media (min-width: v.$tablet-width) {
@@ -96,6 +112,8 @@
     top: auto;
     bottom: 0;
     left: 30px;
+    width: 709px;
+    height: auto;
     transform: none;
     z-index: -1;
   }
@@ -103,6 +121,8 @@
   @media (min-width: v.$desktop-width) {
     top: 143px;
     left: 557px;
+    width: 552px;
+    height: auto;
     z-index: 1;
   }
 }

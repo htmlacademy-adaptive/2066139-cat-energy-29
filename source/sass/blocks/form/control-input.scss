@@ -26,7 +26,7 @@
 }
 
 .control-input[type="checkbox"]:checked {
-  background: v.$basic-white url("../img/icon-check.svg") no-repeat center;
+  background: v.$basic-white url("../img/icons/icon-check.svg") no-repeat center;
   background-size: 18px 14px;
 
   @media (min-width: v.$tablet-width) {

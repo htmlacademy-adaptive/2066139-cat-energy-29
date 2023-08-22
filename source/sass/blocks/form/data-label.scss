@@ -53,7 +53,7 @@
 
   &--icon-email {
     padding-right: 40px;
-    background: url("../img/icon-email.svg") no-repeat right 12px center;
+    background: url("../img/icons/icon-email.svg") no-repeat right 12px center;
     background-size: 20px 20px;
 
     @media (min-width: v.$tablet-width) {
@@ -67,7 +67,7 @@
 
   &--icon-tel {
     padding-right: 40px;
-    background: url("../img/icon-phone.svg") no-repeat right 12px center;
+    background: url("../img/icons/icon-phone.svg") no-repeat right 12px center;
     background-size: 20px 20px;
 
     @media (min-width: v.$tablet-width) {

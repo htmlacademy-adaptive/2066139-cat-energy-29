@@ -4,18 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="main-header main-header--nojs container">
-      <a class="main-header__logo-link" href="index.html" aria-current="page">
-        <img class="main-header__logo" src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
-        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+      <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+          <img class="main-header__logo" src="img/logos/logo-phone.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-text-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-text-tablet.svg">
+          <img class="main-header__logo-text" src="img/logos/logo-text-phone.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        </picture>
       </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav">
         <button class="main-nav__toggle toggle" type="button">
           <span class="toggle__line"></span>
           <span class="visually-hidden">Открыть меню</span>
@@ -98,7 +108,9 @@
             </div>
           </section>
           <section class="program-form__owner-data-input owner-data container" role="group" aria-labelledby="cat-owner-title">
-            <h2 class="owner-data__title title-form" id="cat-owner-title">Контактные данные (владельца кота)</h2>
+            <h2 class="owner-data__title title-form" id="cat-owner-title">
+              <span>Контактные данные (владельца кота)</span>
+            </h2>
             <label class="owner-data__label data-label">
               <span class="data-label__text">
                 E-mail:*

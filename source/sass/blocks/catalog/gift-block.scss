@@ -5,7 +5,7 @@
   padding: 59px 60px 43px;
   background:
     linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) no-repeat center,
-    v.$basic-green url("../img/gift-block-bg.jpg") no-repeat center;
+    v.$basic-green url("../img/catalog/gift-block-bg.jpg") no-repeat center;
   background-size: cover, cover;
 
   &::before {
@@ -14,12 +14,30 @@
     width: 78px;
     height: 80px;
     margin: 0 auto 48px;
-    background: url("../img/icon-gift.svg") no-repeat center;
+    background: url("../img/icons/icon-gift.svg") no-repeat center;
     background-size: contain;
   }
 
-  @media (min-width: v.$tablet-width) {
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) no-repeat center,
+      v.$basic-green url("../img/catalog/gift-block-bg@2x.jpg") no-repeat center;
+    background-size: cover, cover;
+  }
+
+  @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
     padding: 57px 125px 60px 77px;
+    background:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) no-repeat center,
+      v.$basic-green url("../img/catalog/gift-block-bg-tablet.jpg") no-repeat center;
+    background-size: cover, cover;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) no-repeat center,
+        v.$basic-green url("../img/catalog/gift-block-bg-tablet@2x.jpg") no-repeat center;
+      background-size: cover, cover;
+    }
 
     &::before {
       width: 80px;
@@ -30,6 +48,7 @@
 
   @media (min-width: v.$desktop-width) {
     padding: 56px 42px 43px;
+    background-position: center, left -35px center;
   }
 }
 

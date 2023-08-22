@@ -23,11 +23,23 @@
   text-align: center;
 }
 
-.cat-item__image-2 {
+.cat-item__before {
+  @media (min-width: v.$tablet-width) {
+    width: 560px;
+    height: auto;
+  }
+}
+
+.cat-item__after {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: v.$tablet-width) {
+    width: 560px;
+    height: auto;
+  }
 }
 
 .slider-compare-cat__curtain-wrapper {
