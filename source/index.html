@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicons/icon.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
@@ -14,10 +14,18 @@
   <body class="page__body">
     <header class="main-header main-header--nojs main-header--absolute container">
       <a class="main-header__logo-link" href="index.html" aria-current="page">
-        <img class="main-header__logo" src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
-        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+          <img class="main-header__logo" src="img/logos/logo-phone.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-text-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-text-tablet.svg">
+          <img class="main-header__logo-text" src="img/logos/logo-text-phone.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        </picture>
       </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav">
         <button class="main-nav__toggle toggle" type="button">
           <span class="toggle__line"></span>
           <span class="visually-hidden">Открыть меню</span>
@@ -45,7 +53,11 @@
           <h2 class="promo-product__title title-block title-block--secondary-white">Функциональное питание для котов</h2>
           <p class="promo-product__slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="promo-product__image" src="img/index/cat-food.png" width="280" height="270" alt="Товар Cat Energy Pro со вкусом курицы 500 грамм">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index/cat-food-desktop.png 1x, img/index/cat-food-desktop@2x.png 2x" type="image/png" width="552" height="499">
+          <source media="(min-width: 768px)" srcset="img/index/cat-food-tablet.jpg 1x, img/index/cat-food-tablet@2x.jpg 2x" type="image/jpg" width="709" height="608">
+          <img class="promo-product__image" src="img/index/cat-food-phone.png" srcset="img/index/cat-food-phone@2x.png 2x" width="280" height="270" alt="Товар Cat Energy Pro со вкусом курицы 500 грамм">
+        </picture>
         <a class="promo-product__button-guide button button--secondary" href="form.html">Подобрать программу</a>
       </section>
       <section class="nutrition-programs container">
@@ -107,10 +119,16 @@
         <div class="slider-compare-cat">
           <ul class="slider-compare-cat__list">
             <li class="slider-compare-cat__item cat-item">
-              <img class="cat-item__image-1" src="img/index/cat-fat.png" width="280" height="256" alt="Кот с ожирением">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/cat-fat-tablet.png 1x, img/index/cat-fat-tablet@2x.png 2x">
+                <img class="cat-item__before" src="img/index/cat-fat-phone.png" srcset="img/index/cat-fat-phone@2x.png 2x" width="280" height="256" alt="Кот с ожирением">
+              </picture>
             </li>
             <li class="slider-compare-cat__item cat-item">
-              <img class="cat-item__image-2" src="img/index/cat-thin.png" width="280" height="256" alt="Худой кот">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/cat-thin-tablet.png 1x, img/index/cat-thin-tablet@2x.png 2x">
+                <img class="cat-item__after" src="img/index/cat-thin-phone.png" srcset="img/index/cat-thin-phone@2x.png 2x" width="280" height="256" alt="Худой кот">
+              </picture>
             </li>
           </ul>
           <div class="slider-compare-cat__curtain-wrapper">

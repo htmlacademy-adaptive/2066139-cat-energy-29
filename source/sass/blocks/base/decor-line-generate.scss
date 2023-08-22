@@ -1,0 +1,38 @@
+@use "../../global/variables.scss" as v;
+
+@mixin line-decor-section($width-left: 30px, $mt: 17px, $ml: 0, $mr: 0, $gap: 20px, $count-line: 1) {
+  @if $count-line == 1 {
+    column-gap: $gap;
+
+    &::after {
+      content: "";
+      margin-top: $mt;
+      margin-right: $mr;
+      flex-grow: 1;
+      height: 2px;
+      background-color: v.$basic-green;
+    }
+  }
+
+  @else if $count-line == 2 {
+    column-gap: $gap;
+
+    &::before,
+    &::after {
+      content: "";
+      margin-top: $mt;
+      height: 2px;
+      background-color: v.$basic-green;
+    }
+
+    &::before {
+      margin-left: $ml;
+      width: $width-left;
+    }
+
+    &::after {
+      flex-grow: 1;
+      margin-right: $mr;
+    }
+  }
+}

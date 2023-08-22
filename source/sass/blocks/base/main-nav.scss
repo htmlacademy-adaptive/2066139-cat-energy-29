@@ -135,6 +135,8 @@
 
   @media (min-width: v.$tablet-width) {
     padding: 13px 0;
+    font-size: 18px;
+    line-height: 24px;
 
     &:hover:not(.site-nav__link--current) {
       opacity: 0.6;

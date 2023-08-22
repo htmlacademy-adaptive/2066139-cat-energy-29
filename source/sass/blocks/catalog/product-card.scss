@@ -16,13 +16,13 @@
   padding: 20px 0 25px;
 
   @media (min-width: v.$tablet-width) {
-    grid-template: repeat(3, auto) / auto;
-    padding: 161px 37px 40px;
-    background-color: v.$basic-grey;
+    grid-template: repeat(4, auto) / auto;
+    padding: 10px 37px 40px;
+    background: linear-gradient(to bottom, v.$basic-white 81px, v.$basic-grey 81px);
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 161px 38px 40px;
+    padding: 10px 38px 40px;
   }
 }
 
@@ -54,11 +54,24 @@
   place-self: center;
 
   @media (min-width: v.$tablet-width) {
-    position: absolute;
-    top: -34px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: auto;
+    width: 200px;
+    height: 210px;
+    margin-bottom: 22px;
   }
+
+  @media (min-width: v.$desktop-width) {
+    width: 169px;
+  }
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
 }
 
 .product-card__link-title {
@@ -154,6 +167,9 @@
   }
 
   @media (min-width: v.$tablet-width) {
+    align-self: end;
+    box-sizing: border-box;
+    max-height: 429px;
     padding: 50px 37px 40px;
     outline: 2px solid v.$basic-grey;
   }

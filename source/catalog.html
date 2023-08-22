@@ -13,11 +13,19 @@
   </head>
   <body class="page__body">
     <header class="main-header main-header--nojs container">
-      <a class="main-header__logo-link" href="index.html" aria-current="page">
-        <img class="main-header__logo" src="img/logo.svg" width="33" height="38" alt="Логотип «Cat Energy».">
-        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+      <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+          <img class="main-header__logo" src="img/logos/logo-phone.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-text-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-text-tablet.svg">
+          <img class="main-header__logo-text" src="img/logos/logo-text-phone.svg" width="101" height="18" alt="Логотип с надписью «Cat Energy».">
+        </picture>
       </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav">
         <button class="main-nav__toggle toggle" type="button">
           <span class="toggle__line"></span>
           <span class="visually-hidden">Открыть меню</span>
@@ -45,7 +53,10 @@
         <ul class="catalog-product__list cat-product">
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-pro-chicken-500.png" width="68" height="86" alt="Корм линейки «Pro» с курицей 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-pro-chicken-500-tablet.png 1x, img/catalog/product-tablet/cat-energy-pro-chicken-500-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-pro-chicken-500-phone.png" srcset="img/catalog/product-phone/cat-energy-pro-chicken-500-phone@2x.png 2x" width="68" height="86" alt="Корм линейки «Pro» с курицей 500 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title product-catalog-title">Cat Energy PRO 500 г</h3>
@@ -69,7 +80,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-pro-chicken-1000.png" width="84" height="100" alt="Корм линейки «Pro» с курицей 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-pro-chicken-1000-tablet.png 1x, img/catalog/product-tablet/cat-energy-pro-chicken-1000-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-pro-chicken-1000-phone.png" srcset="img/catalog/product-phone/cat-energy-pro-chicken-1000-phone@2x.png 2x" width="84" height="100" alt="Корм линейки «Pro» с курицей 1000 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
@@ -93,7 +107,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-pro-fish-500.png" width="68" height="78" alt="Корм линейки «Pro» с рыбой 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-pro-fish-500-tablet.png 1x, img/catalog/product-tablet/cat-energy-pro-fish-500-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-pro-fish-500-phone.png" srcset="img/catalog/product-phone/cat-energy-pro-fish-500-phone@2x.png 2x" width="68" height="78" alt="Корм линейки «Pro» с рыбой 500 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
@@ -117,7 +134,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-pro-fish-1000.png" width="84" height="100" alt="Корм линейки «Pro» с рыбой 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-pro-fish-1000-tablet.png 1x, img/catalog/product-tablet/cat-energy-pro-fish-1000-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-pro-fish-1000-phone.png" srcset="img/catalog/product-phone/cat-energy-pro-fish-1000-phone@2x.png 2x" width="84" height="100" alt="Корм линейки «Pro» с рыбой 1000 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
@@ -141,7 +161,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-slim-buckwheat-500.png" width="68" height="78" alt="Корм линейки «Slim» с гречкой 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-slim-buckwheat-500-tablet.png 1x, img/catalog/product-tablet/cat-energy-slim-buckwheat-500-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-slim-buckwheat-500-phone.png" srcset="img/catalog/product-phone/cat-energy-slim-buckwheat-500-phone@2x.png 2x" width="68" height="78" alt="Корм линейки «Slim» с гречкой 500 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 500 г</h3>
@@ -165,7 +188,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-slim-buckwheat-1000.png" width="84" height="100" alt="Корм линейки «Slim» с гречкой 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-slim-buckwheat-1000-tablet.png 1x, img/catalog/product-tablet/cat-energy-slim-buckwheat-1000-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-slim-buckwheat-1000-phone.png" srcset="img/catalog/product-phone/cat-energy-slim-buckwheat-1000-phone@2x.png 2x" width="84" height="100" alt="Корм линейки «Slim» с гречкой 1000 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 1000 г</h3>
@@ -189,7 +215,10 @@
 
           <li class="cat-product__item product-card">
             <a class="product-card__link-image" href="#">
-              <img class="product-card__image" src="img/catalog/cat-energy-slim-rice-500.png" width="72" height="84" alt="Корм линейки «Slim» с рисом 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/product-tablet/cat-energy-slim-rice-500-tablet.png 1x, img/catalog/product-tablet/cat-energy-slim-rice-500-tablet@2x.png 2x" type="image/png">
+                <img class="product-card__image" src="img/catalog/product-phone/cat-energy-slim-rice-500-phone.png" srcset="img/catalog/product-phone/cat-energy-slim-rice-500-phone@2x.png 2x" width="72" height="84" alt="Корм линейки «Slim» с рисом 500 грамм">
+              </picture>
             </a>
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy Slim 500 г</h3>

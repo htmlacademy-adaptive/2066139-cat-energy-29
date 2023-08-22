@@ -1,22 +1,5 @@
 @use "../../global/variables.scss" as v;
-
-@mixin line-decor-section($width: 100%, $x1-poz: 0, $x2-poz: 0, $y-poz, $count-line: 1) {
-  @if $count-line == 1 {
-    background: linear-gradient(v.$basic-green, v.$basic-green);
-    background-position: $x1-poz $y-poz;
-    background-size: 100% 2px;
-    background-repeat: no-repeat;
-  }
-
-  @else if $count-line == 2 {
-    background:
-      linear-gradient(v.$basic-green, v.$basic-green),
-      linear-gradient(v.$basic-green, v.$basic-green);
-    background-size: $width 2px, 100% 2px;
-    background-position: $x1-poz $y-poz, $x2-poz $y-poz;
-    background-repeat: no-repeat, no-repeat;
-  }
-}
+@use "../base/decor-line-generate.scss" as line;
 
 .program-nutrition-form__inner-header {
   // Для бесшовного перехода от планшета к десктопу max-width = 1439px
@@ -55,15 +38,6 @@
     line-height: 30px;
   }
 }
-
-/*
-.program-nutrition-form__data-form {
-  // Для бесшовного перехода от планшета к десктопу max-width = 1439px
-  @media (min-width: v.$tablet-width) and (max-width: calc(v.$desktop-width - 1px)) {
-    padding: 0 40px;
-  }
-}
-*/
 
 .program-form__base-info {
   padding-top: 39px;
@@ -143,18 +117,6 @@
   margin-bottom: 13px;
 }
 
-.program-form__owner-data-input {
-  @include line-decor-section ($x1-poz:227px, $y-poz:42px);
-
-  @media (min-width: v.$tablet-width) {
-    @include line-decor-section ($width: 30px, $x2-poz:622px, $y-poz:89px, $count-line: 2);
-  }
-
-  @media (min-width: v.$desktop-width) {
-    @include line-decor-section ($width: 70px, $x2-poz:662px, $y-poz:89px, $count-line: 2);
-  }
-}
-
 .owner-data {
   padding-top: 26px;
   padding-bottom: 24px;
@@ -172,17 +134,30 @@
 }
 
 .owner-data__title {
-  max-width: 190px;
+  display: flex;
   margin-bottom: 35px;
+
+  @include line.line-decor-section ($mr:-20px);
+
+  span {
+    max-width: 190px;
+  }
 
   @media (min-width: v.$tablet-width) {
     max-width: 100%;
     margin-bottom: 76px;
-    grid-column: 1/-1;
+
+    @include line.line-decor-section ($width-left: 30px, $mt: 23px, $ml:-70px, $mr:-70px, $gap: 40px, $count-line: 2);
+
+    span {
+      max-width: none;
+    }
   }
 
   @media (min-width: v.$desktop-width) {
     grid-column: 1/-1;
+
+    @include line.line-decor-section ($width-left: 70px, $mt: 23px, $ml:-110px, $mr:-110px, $gap: 40px, $count-line: 2);
   }
 }
 
@@ -201,30 +176,12 @@
 .program-form__comment {
   padding-bottom: 23px;
 
-  @include line-decor-section ($x1-poz:161px, $y-poz:15px);
-
   @media (min-width: v.$tablet-width) {
     padding: 0 70px 65px;
-
-    @include line-decor-section ($width: 30px, $x2-poz:292px, $y-poz:20px, $count-line: 2);
   }
 
   @media (min-width: v.$desktop-width) {
     padding: 0 v.$desktop-pd 70px;
-
-    @include line-decor-section ($width: 70px, $x2-poz:332px, $y-poz:20px, $count-line: 2);
-  }
-}
-
-.program-form__additionally-input {
-  @include line-decor-section ($x1-poz:181px, $y-poz:14px);
-
-  @media (min-width: v.$tablet-width) {
-    @include line-decor-section ($width: 30px, $x2-poz:322px, $y-poz:20px, $count-line: 2);
-  }
-
-  @media (min-width: v.$desktop-width) {
-    @include line-decor-section ($width: 70px, $x2-poz:362px, $y-poz:20px, $count-line: 2);
   }
 }
 
@@ -241,10 +198,19 @@
 }
 
 .additionally__title {
+  display: flex;
   margin-bottom: 34px;
+
+  @include line.line-decor-section ($mr:-20px);
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 57px;
+
+    @include line.line-decor-section ($width-left: 30px, $mt: 23px, $ml:-70px, $mr:-70px, $gap: 40px, $count-line: 2);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    @include line.line-decor-section ($width-left: 70px, $mt: 23px, $ml:-110px, $mr:-110px, $gap: 40px, $count-line: 2);
   }
 }
 
