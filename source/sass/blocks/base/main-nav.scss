@@ -150,17 +150,22 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -1px;
+      bottom: 2px;
       content: "";
       height: 2px;
       background-color: v.$basic-green;
     }
   }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 16px 0 13px;
+    font-size: 20px;
+    line-height: auto;
+  }
 }
 
 @media (min-width: v.$desktop-width) {
   .main-header--absolute .site-nav__link {
-    padding: 16px 0 13px;
     color: v.$basic-white;
 
     &--current::after {

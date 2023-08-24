@@ -7,32 +7,34 @@
   background-color: v.$index-nutritional-results;
 
   @media (min-width: v.$tablet-width) {
-    padding: 45px 0 0;
-    background-color: v.$basic-white;
+    // padding: 45px 0 101px;
+    padding-top: 45px;
+    padding-bottom: 101px;
+    background: linear-gradient(to top, v.$index-nutritional-results 462px, v.$basic-white 462px);
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 0;
-    background-color: v.$basic-white;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(to top, v.$basic-grey 462px, v.$basic-white 462px);
   }
 }
 
 .nutritional-results__title {
-  margin: 0 0 40px 20px;
+  margin-bottom: 40px;
 
   @media (min-width: v.$tablet-width) {
-    margin: 0 0 60px 30px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: v.$desktop-width) {
-    margin: 0 0 76px 110px;
+    margin-bottom: 76px;
   }
 }
 
 .nutritional-results__wrapper {
   @media (min-width: v.$desktop-width) {
-    padding: 70px 897px 75px 110px;
-    background-color: v.$basic-grey;
+    padding: 70px 787px 75px 0;
   }
 }
 
@@ -58,7 +60,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 250px;
+    margin-bottom: 104px;
   }
 
   @media (min-width: v.$desktop-width) {

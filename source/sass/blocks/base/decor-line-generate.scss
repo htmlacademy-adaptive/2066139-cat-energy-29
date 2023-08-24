@@ -1,6 +1,6 @@
 @use "../../global/variables.scss" as v;
 
-@mixin line-decor-section($width-left: 30px, $mt: 17px, $ml: 0, $mr: 0, $gap: 20px, $count-line: 1) {
+@mixin line-decor-section($width-left: 30px, $mt: 16px, $ml: 0, $mr: 0, $gap: 20px, $count-line: 1) {
   @if $count-line == 1 {
     column-gap: $gap;
 

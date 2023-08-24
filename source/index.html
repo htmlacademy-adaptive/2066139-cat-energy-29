@@ -96,13 +96,13 @@
             <p class="advantages__description advantages__description--icon-eat description-text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description advantages__description--icon-clock description-text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="advantages__description advantages__description--icon-clock description-text">Уже через месяц наслаждайтесь изменениями к лучшему<br>вашего питомца!</p>
           </li>
         </ul>
       </section>
-      <section class="nutritional-results">
+      <section class="nutritional-results container">
         <h2 class="nutritional-results__title title-block">Живой пример</h2>
-        <div class="nutritional-results__wrapper container">
+        <div class="nutritional-results__wrapper">
           <p class="nutritional-results__description description-text">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
@@ -122,25 +122,23 @@
         </div>
         <div class="slider-compare-cat">
           <ul class="slider-compare-cat__list">
-            <li class="slider-compare-cat__item cat-item">
+            <li class="slider-compare-cat__item cat-item-1" style="clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/index/cat-fat-tablet.png 1x, img/index/cat-fat-tablet@2x.png 2x">
                 <img class="cat-item__before" src="img/index/cat-fat-phone.png" srcset="img/index/cat-fat-phone@2x.png 2x" width="280" height="256" alt="Кот с ожирением">
               </picture>
             </li>
-            <li class="slider-compare-cat__item cat-item">
+            <li class="slider-compare-cat__item cat-item-2" style="clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/index/cat-thin-tablet.png 1x, img/index/cat-thin-tablet@2x.png 2x">
                 <img class="cat-item__after" src="img/index/cat-thin-phone.png" srcset="img/index/cat-thin-phone@2x.png 2x" width="280" height="256" alt="Худой кот">
               </picture>
             </li>
           </ul>
-          <div class="slider-compare-cat__curtain-wrapper">
-            <div class="slider-compare-cat__curtain">
-              <span class="slider-compare-cat__thumb"></span>
-            </div>
-            <input class="slider-compare-cat__thumb-toggle" type="range" name="thumb-toggle" min="0" max="100" value="50">
-          </div>
+          <button class="slider-compare-cat__thumb-toggle" data-button-slider>
+            <span class="visually-hidden">Переключатель слайдера</span>
+            <span class="slider-compare-cat__thumb"></span>
+          </button>
         </div>
       </section>
     </main>
@@ -150,7 +148,7 @@
       <section class="main-footer__address address">
         <h3 class="visually-hidden">Почтовый адрес</h3>
         <div class="address__contacts container">
-          <b class="address__title">Приглашаем к сотрудничеству дилеров!</b>
+          <b class="address__title">Приглашаем к&nbspсотрудничеству дилеров!</b>
           <address class="address__text">ул.&nbspБольшая Конюшенная, д.&nbsp19/8 <span class="address__city">Санкт-Петербург</span></address>
         </div>
         <div class="address__map location">
