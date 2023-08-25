@@ -55,5 +55,3 @@ const handleMouseUp = () => {
 if (button) {
   button.addEventListener('mousedown', handleDown);
 }
-
-

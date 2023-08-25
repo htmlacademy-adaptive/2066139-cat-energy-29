@@ -2,16 +2,12 @@
 
 .additionally-product-card {
   padding: 13px 0 19px;
-  // border-top: 1px solid v.$special_grey;
-  // border-left: none;
-  // border-right: none;
-  box-shadow: 0 -1px 0 0px v.$special_grey;
+  box-shadow: 0 -1px 0 0 v.$special_grey;
 
   &:last-child {
-    // border-bottom: 1px solid v.$special_grey;
     box-shadow:
-      0 -1px 0 0px v.$special_grey,
-      0 1px 0 0px v.$special_grey;
+      0 -1px 0 0 v.$special_grey,
+      0 1px 0 0 v.$special_grey;
   }
 
   @media (min-width: v.$tablet-width) {

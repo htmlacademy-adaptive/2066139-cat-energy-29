@@ -67,7 +67,7 @@
   height: 22px;
 
   &::before {
-    content: "";;
+    content: "";
     background-color: v.$special_grey-alt;
     transition: background-color 0.3s;
   }
