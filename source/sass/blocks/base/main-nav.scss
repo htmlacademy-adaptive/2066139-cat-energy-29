@@ -99,6 +99,8 @@
 
   @media (min-width: v.$tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
   }
 }
 

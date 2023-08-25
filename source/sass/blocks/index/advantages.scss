@@ -43,6 +43,12 @@
   column-gap: 20px;
   align-items: center;
 
+  @media (max-width: v.$mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
   &::before {
     flex-shrink: 0;
     content: "";

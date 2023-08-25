@@ -214,6 +214,14 @@
       margin: 0 auto 50px;
     }
   }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto 26px;
+
+    &::before {
+      margin: 0 auto 40px;
+    }
+  }
 }
 
 .card-show-more__description {
@@ -225,5 +233,9 @@
     max-width: 170px;
     margin: 0 auto 82px;
     line-height: 18px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto 90px;
   }
 }

@@ -23,6 +23,7 @@
 .social__logo-link {
   justify-self: center;
   color: v.$basic-black-alt;
+  transition: color 0.4s;
 
   @media (min-width: v.$tablet-width) {
     &:hover,
@@ -33,10 +34,6 @@
     &:active {
       color: v.$logo-company-active;
     }
-  }
-
-  img {
-    display: block;
   }
 }
 
@@ -66,6 +63,10 @@
   width: 28px;
   height: 22px;
 
+  svg {
+    transition: fill 0.4s;
+  }
+
   @media (min-width: v.$tablet-width) {
     &:hover svg,
     &:focus svg {
@@ -84,6 +85,10 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+  
+  svg {
+    transition: fill 0.4s;
+  }
 
   @media (min-width: v.$tablet-width) {
     gap: 23px;
