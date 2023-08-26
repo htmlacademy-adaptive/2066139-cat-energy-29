@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     top: 24px;
-    left: 13px;
+    left: 12px;
     width: 67px;
     height: 50px;
     background: url("../img/icons/icon-cat-pro.svg") no-repeat;
@@ -31,7 +31,7 @@
     padding: 77px 316px 53px 53px;
 
     &--slim::before {
-      top: 81px;
+      top: 80px;
       left: auto;
       right: 63px;
       width: 200px;
@@ -63,7 +63,7 @@
 
     &--pro::before {
       top: 47px;
-      left: 33px;
+      left: 35px;
       width: 134px;
       height: 100px;
       background-size: 134px 100px;
@@ -100,7 +100,7 @@
       display: block;
       width: 100%;
       height: 1px;
-      margin-top: 23px;
+      margin-top: 22px;
       background-color: v.$line;
     }
   }
@@ -137,6 +137,7 @@
   }
 
   @media (min-width: v.$tablet-width) {
+    column-gap: 25px;
     font-size: 20px;
     line-height: normal;
   }

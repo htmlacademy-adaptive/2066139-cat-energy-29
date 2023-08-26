@@ -2,7 +2,7 @@
 
 .social {
   display: grid;
-  row-gap: 20px;
+  row-gap: 19px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: v.$basic-grey;
@@ -14,7 +14,7 @@
     padding-bottom: 55px;
   }
 
-  @media (min-width: v.$tablet-width) {
+  @media (min-width: v.$desktop-width) {
     padding-top: 66px;
     padding-bottom: 66px;
   }
@@ -22,21 +22,21 @@
 
 .social__logo-link {
   justify-self: center;
-  color: v.$basic-black-alt;
+  width: 128px;
+  height: 24px;
+  mask-image: url("../img/sprite.svg#logo-text-footer");
+  background-color: v.$basic-black-alt;
+  transition: color 0.4s;
 
   @media (min-width: v.$tablet-width) {
     &:hover,
     &:focus {
-      color: v.$logo-company-hover;
+      background-color: v.$logo-company-hover;
     }
 
     &:active {
-      color: v.$logo-company-active;
+      background-color: v.$logo-company-active;
     }
-  }
-
-  img {
-    display: block;
   }
 }
 
@@ -53,6 +53,7 @@
   border-bottom: 1px solid v.$line;
 
   @media (min-width: v.$tablet-width) {
+    margin-left: 40px;
     padding: 0;
     border: none;
   }
@@ -65,15 +66,50 @@
   width: 28px;
   height: 22px;
 
+  &::before {
+    content: "";
+    background-color: v.$special_grey-alt;
+    transition: background-color 0.3s;
+  }
+
+  &--vk {
+    &::before {
+      width: 27px;
+      height: 17px;
+      mask-image: url("../img/sprite.svg#icon-vk");
+    }
+  }
+
+  &--yt {
+    &::before {
+      width: 24px;
+      height: 19px;
+      mask-image: url("../img/sprite.svg#icon-youtube");
+    }
+  }
+
+  &--tg {
+    &::before {
+      width: 20px;
+      height: 18px;
+      mask-image: url("../img/sprite.svg#icon-tg");
+    }
+  }
+
+
   @media (min-width: v.$tablet-width) {
-    &:hover svg,
-    &:focus svg {
-      fill: v.$basic-green;
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: v.$basic-green;
+      }
     }
 
     &:active {
-      fill: v.$basic-green;
-      opacity: 0.3;
+      &::before {
+        background-color: v.$basic-green;
+        opacity: 0.3;
+      }
     }
   }
 }
@@ -83,6 +119,10 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+
+  svg {
+    transition: fill 0.4s;
+  }
 
   @media (min-width: v.$tablet-width) {
     gap: 23px;

@@ -20,6 +20,7 @@
   }
 
   @media (min-width: v.$tablet-width) {
+    max-width: 245px;
     padding: 40px 0 57px;
 
     &::after {
@@ -41,6 +42,12 @@
   display: flex;
   column-gap: 20px;
   align-items: center;
+
+  @media (max-width: v.$mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   &::before {
     flex-shrink: 0;

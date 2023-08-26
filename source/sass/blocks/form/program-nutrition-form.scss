@@ -174,19 +174,19 @@
 }
 
 .program-form__comment {
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 
   @media (min-width: v.$tablet-width) {
     padding: 0 70px 65px;
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 0 v.$desktop-pd 70px;
+    padding: 0 v.$desktop-pd 67px;
   }
 }
 
 .additionally {
-  padding-bottom: 34px;
+  padding-bottom: 35px;
 
   @media (min-width: v.$tablet-width) {
     padding: 0 70px 54px;
@@ -218,18 +218,18 @@
   @media (min-width: v.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 29px 60px;
   }
 
   @media (min-width: v.$desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    gap: 32px 79px;
   }
 }
 
 .additionally__item:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 0;
@@ -240,11 +240,11 @@
   text-align: center;
 
   @media (min-width: v.$tablet-width) {
-    padding: 0 70px;
+    padding: 0 71px;
     text-align: left;
   }
 
-  @media (min-width: v.$tablet-width) {
+  @media (min-width: v.$desktop-width) {
     padding: 0 v.$desktop-pd;
   }
 }

@@ -29,6 +29,7 @@
 
   @media (min-width: v.$desktop-width) {
     grid-template-columns: repeat(4, auto);
-    gap: 77px;
+    justify-content: space-between;
+    gap: 0;
   }
 }

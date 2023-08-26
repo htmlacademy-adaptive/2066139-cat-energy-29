@@ -5,7 +5,7 @@
   display: flex;
   margin-bottom: 38px;
 
-  @include line.line-decor-section ($mr:-20px);
+  @include line.line-decor-section ($mt: 15px, $mr:-20px);
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 87px;
@@ -30,8 +30,7 @@
   line-height: 18px;
   color: v.$special_dark-grey;
   text-transform: uppercase;
-  border: none;
-  outline: 1px solid v.$border-field;
+  border: 1px solid v.$border-field;
   resize: none;
 
   @media (min-width: v.$tablet-width) {
