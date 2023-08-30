@@ -1,24 +1,3 @@
-let headerMain = document.querySelector('.main-header');
-let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
-
-// На случай неработоспособности скрипта показываем меню в потоке документа
-headerMain.classList.remove('main-header--nojs');
-if (!headerMain.classList.contains('main-header--nojs')) {
-  navMain.classList.add('main-nav--closed');
-};
-
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
-
-// Slider
 const container = document.querySelector('.slider-compare-cat');
 const image_1 = container.querySelector('.cat-item-1');
 const image_2 = container.querySelector('.cat-item-2');
