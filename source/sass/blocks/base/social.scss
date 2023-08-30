@@ -53,7 +53,7 @@
   border-bottom: 1px solid v.$line;
 
   @media (min-width: v.$tablet-width) {
-    margin-left: 40px;
+    margin-left: 33px;
     padding: 0;
     border: none;
   }
@@ -120,20 +120,28 @@
   justify-content: space-between;
   text-decoration: none;
 
-  svg {
-    transition: fill 0.4s;
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../img/sprite.svg#logo-htmlacademy");
+    background-color: v.$special_grey-alt;
+    transition: background-color 0.3s;
   }
 
   @media (min-width: v.$tablet-width) {
     gap: 23px;
 
-    &:hover svg,
-    &:focus svg {
-      fill: v.$basic-green;
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: v.$basic-green;
+      }
     }
 
-    &:active {
-      fill: v.$basic-green;
+    &:active::after {
+      background-color: v.$basic-green;
       opacity: 0.3;
     }
   }
@@ -144,9 +152,4 @@
   font-size: 16px;
   line-height: 20px;
   color: v.$special_dark-grey;
-}
-
-.logo-academy__logo {
-  width: 27px;
-  height: 34px;
 }
