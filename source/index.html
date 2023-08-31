@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Кошачий корм, функциональное питание для котов, интернет-магазин">
+    <meta name="description" content="Магазин Cat Energy - функциональное питание для ваших котов">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-180.png"> <!-- 180×180 -->
@@ -165,7 +167,15 @@
             width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade" title="Расположение на карте: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
           </iframe>
-          <img class="location__image" src="#" loading="lazy" width="320" height="362" alt="Расположение на карте: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/maps/map-desktop.webp 1x, img/maps/map-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/maps/map-tablet.webp 1x, img/maps/map-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="img/maps/map-phone.webp 1x, img/maps/map-phone@2x.webp 2x" type="image/webp">
+
+            <source media="(min-width: 1440px)" srcset="img/maps/map-desktop.jpg 1x, img/maps/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/maps/map-tablet.jpg 1x, img/maps/map-tablet@2x.jpg 2x">
+            <img class="location__image" src="img/maps/map-phone.jpg" srcset="img/maps/map-phone@2x.jpg 2x" loading="lazy" width="320" height="362" alt="Расположение на карте: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8.">
+          </picture>
         </div>
       </section>
       <section class="main-footer__social social container">
