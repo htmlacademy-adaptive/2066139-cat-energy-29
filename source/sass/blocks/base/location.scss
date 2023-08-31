@@ -13,4 +13,15 @@
 
 .location__image {
   display: none;
+  margin: 0 auto;
+
+  @media (min-width: v.$tablet-width) {
+    width: v.$tablet-width;
+    height: 400px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: v.$desktop-width;
+    height: 400px;
+  }
 }
