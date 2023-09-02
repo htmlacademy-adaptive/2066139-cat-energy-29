@@ -47,6 +47,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    max-width: 480px;
     margin-bottom: 69px;
   }
 }

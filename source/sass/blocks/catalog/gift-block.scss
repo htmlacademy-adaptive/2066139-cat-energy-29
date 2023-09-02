@@ -66,7 +66,8 @@
 }
 
 .gift-block__title {
-  margin: 0;
+  max-width: 165px;
+  margin: 0 auto;
   font-family: "Lato", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -74,7 +75,7 @@
   color: v.$basic-white;
 
   @media (min-width: v.$tablet-width) {
-    max-width: 165px;
+    margin: 0;
     text-align: left;
   }
 
