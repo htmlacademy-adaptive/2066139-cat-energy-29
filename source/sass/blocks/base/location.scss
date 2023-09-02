@@ -1,5 +1,9 @@
 @use "../../global/variables.scss" as v;
 
+.location {
+  position: relative;
+}
+
 .location__map {
   display: block;
   width: 100%;
@@ -12,16 +16,14 @@
 }
 
 .location__image {
-  display: none;
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  object-fit: cover;
+  transform: translateX(-50%);
 
   @media (min-width: v.$tablet-width) {
-    width: v.$tablet-width;
-    height: 400px;
-  }
-
-  @media (min-width: v.$desktop-width) {
-    width: v.$desktop-width;
     height: 400px;
   }
 }
