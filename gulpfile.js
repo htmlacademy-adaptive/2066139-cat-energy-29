@@ -83,9 +83,15 @@ const optimizeSvg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-const stackSvg = () => {
+export const stackSvg = () => {
   return gulp.src('source/img/sprite-source/*.svg')
-    .pipe(svgo())
+    .pipe(svgo({
+      plugins: [
+        {
+          removeUnknownsAndDefaults: false
+        }
+      ]
+    }))
     .pipe(stacksvg({ output: `sprite` }))
     .pipe(gulp.dest('build/img'));
 }

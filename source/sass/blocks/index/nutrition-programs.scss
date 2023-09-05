@@ -39,6 +39,8 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    flex-grow: 1;
+
     &:not(:last-child) {
       margin-bottom: 0;
     }
