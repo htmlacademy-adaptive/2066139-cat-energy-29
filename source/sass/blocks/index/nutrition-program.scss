@@ -118,6 +118,7 @@
 }
 
 .nutrition-program__link {
+  position: relative;
   display: flex;
   align-items: center;
   column-gap: 15px;
@@ -128,17 +129,52 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &::after {
-    content: "";
-    width: 24px;
-    height: 12px;
-    background: url("../img/icons/icon-arrow-right.svg") no-repeat;
-    background-size: 24px 12px;
-  }
-
   @media (min-width: v.$tablet-width) {
     column-gap: 25px;
     font-size: 20px;
     line-height: normal;
+
+    &:hover span{
+      width: 26px;
+
+      &::after {
+        transform: translate(26px, -50%);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid v.$focus;
+      outline-offset: 2px;
+    }
+
+    @supports not selector(:focus-visible) {
+      &:focus {
+        outline: 2px solid v.$focus;
+        outline-offset: 2px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.program-link__arrow-right {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: v.$basic-black;
+  transition: width 0.3s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    border: 6px solid #000;
+    border-color: transparent transparent transparent #000000;
+    transform: translate(18px, -50%);
+    transition: transform 0.3s;
   }
 }

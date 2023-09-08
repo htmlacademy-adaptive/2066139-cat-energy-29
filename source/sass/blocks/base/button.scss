@@ -11,21 +11,38 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: v.$basic-grey;
-  transition: all 0.2s;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: v.$special_grey-light;
+  }
+
+  &:focus-visible {
+    outline: 3px solid v.$focus;
+    outline-offset: 2px;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 3px solid v.$focus;
+      outline-offset: 2px;
+    }
   }
 
   &:active:not(:disabled) {
     color: rgba($color: v.$special_dark-grey, $alpha: 0.3);
   }
 
+  &:disabled {
+    opacity: 0.6;
+  }
+
   &--secondary {
     color: v.$basic-white;
     background-color: v.$basic-green;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: v.$basic-green-alt;
     }
 

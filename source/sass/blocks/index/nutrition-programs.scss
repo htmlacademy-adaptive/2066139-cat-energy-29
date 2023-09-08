@@ -22,12 +22,17 @@
 
   @media (min-width: v.$desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 80px;
+    width: v.$desktop-width - 2 * v.$desktop-pd;
+    margin: 0 auto;
   }
 }
 
 .nutrition-programs__item {
+  box-sizing: border-box;
+
   &:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -39,7 +44,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    flex-grow: 1;
+    max-width: 570px;
 
     &:not(:last-child) {
       margin-bottom: 0;

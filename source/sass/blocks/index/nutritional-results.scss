@@ -1,7 +1,6 @@
 @use "../../global/variables.scss" as v;
 
 .nutritional-results {
-  position: relative;
   padding-top: 25px;
   padding-bottom: 40px;
   background-color: v.$index-nutritional-results;
@@ -21,6 +20,16 @@
   }
 }
 
+.nutritional-results__wrapper {
+  position: relative;
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto;
+    max-width: v.$desktop-width - v.$desktop-pd * 2;
+  }
+
+}
+
 .nutritional-results__title {
   margin-bottom: 40px;
 
@@ -33,7 +42,7 @@
   }
 }
 
-.nutritional-results__wrapper {
+.nutritional-results__wrapper-text {
   @media (min-width: v.$desktop-width) {
     padding: 70px 787px 75px 0;
   }
@@ -75,13 +84,15 @@
 
 .nutritional-results__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  column-gap: 32px;
+  gap: 20px 32px;
   box-sizing: border-box;
   margin: 0;
 
   @media (min-width: v.$tablet-width) {
-    column-gap: 43px;
+    justify-content: start;
+    gap: 20px 43px;
   }
 }
 

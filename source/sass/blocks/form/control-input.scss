@@ -20,6 +20,10 @@
     border: 1px solid v.$checkbox-hover;
   }
 
+  &:focus {
+    outline: 2px solid v.$special_dark-grey;
+  }
+
   &:disabled {
     opacity: 0.3;
   }

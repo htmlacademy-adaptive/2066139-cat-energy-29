@@ -115,18 +115,22 @@
             <h2 class="owner-data__title title-form" id="cat-owner-title">
               <span>Контактные данные (владельца кота)</span>
             </h2>
-            <label class="owner-data__label data-label">
-              <span class="data-label__text">
-                E-mail:*
-              </span>
-              <input class="data-label__input-box field-data field-data--icon-email" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="Введите ваш e-mail" required>
-            </label>
-            <label class="owner-data__label data-label">
-              <span class="data-label__text">
-                Телефон:*
-              </span>
-              <input class="data-label__input-box field-data field-data--icon-tel" type="tel" name="owner-tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
-            </label>
+            <div class="owner-data__wrapper">
+              <label class="owner-data__label data-label">
+                <span class="data-label__text">
+                  E-mail:*
+                </span>
+                <input class="data-label__input-box field-data" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="Введите ваш e-mail" required>
+                <span class="data-label__icon data-label__icon--icon-email"></span>
+              </label>
+              <label class="owner-data__label data-label">
+                <span class="data-label__text">
+                  Телефон:*
+                </span>
+                <input class="data-label__input-box field-data" type="tel" name="owner-tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон" required>
+                <span class="data-label__icon data-label__icon--icon-tel"></span>
+              </label>
+            </div>
           </section>
           <section class="program-form__comment comment-text container" role="group" aria-labelledby="comment-title">
             <h2 class="comment-text__title title-form" id="comment-title">Комментарий</h2>
@@ -197,32 +201,33 @@
         </div>
       </section>
       <section class="main-footer__social social container">
-        <h3 class="visually-hidden">Ссылки на соцсети</h3>
-        <a class="social__logo-link" href="index.html" aria-label="Главная страница сайта Cat Energy"></a>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Группа Vkontakte</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Канал YouTube</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Канал Telegram</span>
-            </a>
-          </li>
-        </ul>
-        <a class="social__logo-academy-link logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="logo-academy__text">HTML Academy</span>
-        </a>
+        <div class="social__wrapper">
+          <h3 class="visually-hidden">Ссылки на соцсети</h3>
+          <a class="social__logo-link" href="index.html" aria-label="Главная страница сайта Cat Energy"></a>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Группа Vkontakte</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Канал YouTube</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Канал Telegram</span>
+              </a>
+            </li>
+          </ul>
+          <a class="social__logo-academy-link logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="logo-academy__text">HTML Academy</span>
+          </a>
+        </div>
       </section>
     </footer>
 
-    <script src="js/slider.js"></script>
     <script src="js/phone-menu.js"></script>
 
   </body>

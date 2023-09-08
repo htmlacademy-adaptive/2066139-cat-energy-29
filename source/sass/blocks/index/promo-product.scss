@@ -11,18 +11,20 @@
     left: 0;
     display: block;
     width: 100%;
-    height: 302px;
+    height: 63%;
     background:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) center top,
-      image-set(url("../img/index/cat-bg-phone.webp") type("image/webp"), url("../img/index/cat-bg-phone.jpg")) center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, contain;
+      image-set(url("../img/index/cat-bg-phone.webp") type("image/webp"), url("../img/index/cat-bg-phone.jpg")) center,
+      linear-gradient(to right, #46583c, #293621);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, contain, cover;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        image-set(url("../img/index/cat-bg-phone@2x.webp") type("image/webp"), url("../img/index/cat-bg-phone@2x.jpg"));
+        image-set(url("../img/index/cat-bg-phone@2x.webp") type("image/webp"), url("../img/index/cat-bg-phone@2x.jpg")),
+        linear-gradient(to right, #46583c, #293621);
     }
   }
 
@@ -37,6 +39,9 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    position: static;
+    max-width: v.$desktop-width - v.$desktop-pd * 2;
+    margin: 0 auto;
     padding-top: 225px;
     padding-bottom: 184px;
     text-align: left;
@@ -63,13 +68,19 @@
   }
 }
 
+.promo-product-wrapper {
+  @media (min-width: v.$desktop-width) {
+    position: relative;
+  }
+}
+
 .promo-product__promo-text {
   margin: 0 0 138px;
-  padding: 27px 0 164px;
+  padding: 27px 0 154px;
 
   @media (min-width: v.$tablet-width) {
     margin: 0;
-    padding: 65px 90px 50px;
+    padding: 65px 90px 40px;
   }
 
   @media (min-width: v.$desktop-width) {
@@ -90,7 +101,7 @@
 }
 
 .promo-product__slogan {
-  margin: 0;
+  margin-block: 0 10px;
   line-height: 14px;
   color: v.$basic-white;
   text-transform: uppercase;
@@ -105,7 +116,7 @@
 
 .promo-product__image {
   position: absolute;
-  top: 167px;
+  top: calc(100% - 313px);
   left: 50%;
   transform: translateX(-50%);
 
@@ -120,8 +131,8 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    top: 143px;
-    left: 557px;
+    top: -82px;
+    left: 447px;
     width: 552px;
     height: auto;
     z-index: 1;
@@ -132,15 +143,16 @@
   min-width: 280px;
   width: 100%;
   margin: 0 auto;
-  padding: 11px 0;
+  padding: 11px 15px;
   font-size: 14px;
   line-height: 18px;
+  box-sizing: border-box;
 
   @media (min-width: v.$tablet-width) {
     min-width: 244px;
     width: auto;
     margin-left: 90px;
-    padding: 17px 0;
+    padding: 17px 15px;
     font-size: 20px;
     line-height: 20px;
   }

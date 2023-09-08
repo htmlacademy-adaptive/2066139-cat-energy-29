@@ -14,7 +14,7 @@
   @media (min-width: v.$desktop-width) {
     position: absolute;
     top: 0;
-    right: 110px;
+    right: 0;
   }
 }
 
@@ -79,6 +79,11 @@
     .slider-compare-cat__thumb::after {
       border-left-color: v.$basic-green;
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$focus;
+    border-radius: 2px;
   }
 
   &:active:not(:disabled) {

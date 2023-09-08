@@ -12,6 +12,7 @@
 }
 
 .data-label {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -28,54 +29,77 @@
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
-  padding: 14px 15px 13px;
+  padding: 14px 40px 13px 15px;
   font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -moz-appearance: textfield;
+
+  /* remove the arrows from the input */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 
   @include text-style;
   border: none;
   outline: 1px solid v.$border-field;
 
-  &:hover:not(:disabled) {
+  &:hover:not(:disabled):not(:focus,:invalid) {
     outline: 1px solid v.$special_grey;
   }
 
   &:focus {
     outline: 2px solid v.$special_dark-grey;
+
+    + .data-label__icon {
+      background-color: v.$basic-green;
+    }
+  }
+
+  &[required]:invalid:not(:placeholder-shown) {
+    outline: 2px solid v.$status_error;
+
+    + .data-label__icon {
+      background-color: v.$status_error;
+    }
   }
 
   &:disabled {
-    outline: 2px solid v.$status_error;
+    opacity: 0.6;
   }
 
   @media (min-width: v.$tablet-width) {
-    padding: 11px 20px;
+    padding: 11px 40px 11px 20px;
   }
+}
+
+.data-label__icon {
 
   &--icon-email {
-    padding-right: 40px;
-    background: url("../img/icons/icon-email.svg") no-repeat right 12px center;
-    background-size: 20px 20px;
-
-    @media (min-width: v.$tablet-width) {
-      background-position: right 14px center;
-    }
-
-    @media (min-width: v.$desktop-width) {
-      background-position: right 16px center;
-    }
+    mask: url("../img/sprite.svg#icon-email") no-repeat;
+    mask-size: 20px 20px;
   }
 
   &--icon-tel {
-    padding-right: 40px;
-    background: url("../img/icons/icon-phone.svg") no-repeat right 12px center;
-    background-size: 20px 20px;
+    mask: url("../img/sprite.svg#icon-phone")  no-repeat;
+    mask-size: 20px 20px;
+  }
+
+  &--icon-email,
+  &--icon-tel {
+    position: absolute;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: v.$basic-black;
 
     @media (min-width: v.$tablet-width) {
-      background-position: right 14px center;
+      right: 14px;
     }
 
     @media (min-width: v.$desktop-width) {
-      background-position: right 16px center;
+      right: 16px;
     }
   }
 }

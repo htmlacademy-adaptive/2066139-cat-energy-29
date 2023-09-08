@@ -44,7 +44,7 @@
     padding: 9px 20px;
   }
 
-  &:hover:not(:disabled) {
+  &:hover:not(:disabled):not(:focus) {
     outline: 1px solid v.$special_grey;
   }
 
@@ -53,6 +53,6 @@
   }
 
   &:disabled {
-    outline: 2px solid v.$status_error;
+    opacity: 0.6;
   }
 }
