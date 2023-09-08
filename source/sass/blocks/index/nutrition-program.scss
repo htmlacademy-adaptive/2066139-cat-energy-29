@@ -134,7 +134,7 @@
     font-size: 20px;
     line-height: normal;
 
-    &:hover span{
+    &:hover span {
       width: 26px;
 
       &::after {
@@ -172,8 +172,8 @@
     content: "";
     top: 50%;
     left: 0;
-    border: 6px solid #000;
-    border-color: transparent transparent transparent #000000;
+    border: 6px solid v.$basic-black;
+    border-color: transparent transparent transparent v.$basic-black;
     transform: translate(18px, -50%);
     transition: transform 0.3s;
   }
