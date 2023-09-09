@@ -52,20 +52,6 @@
   }
 }
 
-.additionally-catalog__gift {
-  @media (min-width: v.$tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  @media (min-width: v.$desktop-width) {
-    flex-direction: column;
-    justify-content: center;
-    grid-row: 2/3;
-  }
-}
-
 .gift-block__title {
   max-width: 165px;
   margin: 0 auto;

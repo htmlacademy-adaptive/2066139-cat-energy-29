@@ -1,0 +1,90 @@
+@use "../../global/variables.scss" as v;
+
+.program-form__base-info {
+  padding-top: 39px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 66px 70px 0;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    padding: 66px v.$desktop-pd 0;
+  }
+}
+
+.program-form__cat-param-input {
+  margin-bottom: 24px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 569px;
+    margin: 0 81px 0 0;
+  }
+}
+
+.program-form ul[class$="list"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-form__comment {
+  padding-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 70px 62px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 v.$desktop-pd 67px;
+  }
+}
+
+.program-form__inner-footer {
+  text-align: center;
+
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 0 71px;
+    text-align: left;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 v.$desktop-pd;
+  }
+}
+
+.program-form__button {
+  width: 100%;
+  margin-bottom: 21px;
+  font-family: inherit;
+  border: none;
+
+  @media (min-width: v.$tablet-width) {
+    width: 282px;
+    margin-right: 64px;
+    margin-bottom: 0;
+    padding: 16px 0;
+    font-size: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+  }
+}
+
+.program-form__legend {
+  font-family: "Lato", "Tahoma", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+  }
+}

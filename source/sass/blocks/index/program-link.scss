@@ -1,0 +1,60 @@
+@use "../../global/variables.scss" as v;
+
+.program-link {
+  padding: 4px 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: v.$basic-black;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+
+    &:focus-visible {
+      outline: 2px solid v.$focus;
+      outline-offset: 2px;
+    }
+
+    @supports not selector(:focus-visible) {
+      &:focus {
+        outline: 2px solid v.$focus;
+        outline-offset: 2px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.program-link__arrow-right {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: v.$basic-black;
+  transition: width 0.3s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    border: 6px solid v.$basic-black;
+    border-color: transparent transparent transparent v.$basic-black;
+    transform: translate(18px, -50%);
+    transition: transform 0.3s;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    .program-link:hover & {
+      width: 26px;
+
+      &::after {
+        transform: translate(26px, -50%);
+      }
+    }
+  }
+}
