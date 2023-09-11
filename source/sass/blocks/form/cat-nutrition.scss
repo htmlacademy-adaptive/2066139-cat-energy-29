@@ -1,0 +1,39 @@
+@use "../../global/variables.scss" as v;
+
+.cat-nutrition {
+  position: relative;
+  padding: 22px 0 19px;
+
+  @media (max-width: v.$mobile-width-only) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background-color: v.$line;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 23px 27px 27px;
+    outline: 1px solid v.$border-field;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.cat-nutrition__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+}

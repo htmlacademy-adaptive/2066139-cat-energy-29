@@ -1,0 +1,11 @@
+@use "../../global/variables.scss" as v;
+
+.cat-param__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  @media (min-width: v.$tablet-width) {
+    row-gap: 20px;
+  }
+}

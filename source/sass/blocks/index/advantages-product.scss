@@ -8,6 +8,8 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    width: v.$desktop-width - 2 * v.$desktop-pd;
+    margin: 0 auto;
     padding-bottom: 70px;
   }
 }

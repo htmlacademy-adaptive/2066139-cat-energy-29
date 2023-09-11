@@ -1,0 +1,38 @@
+@use "../../global/variables.scss" as v;
+
+.parameters__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 2px 0 4px;
+    border-bottom: 1px solid v.$special_grey;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.product-parameter__name,
+.product-parameter__description {
+  font-family: "Lato", "Tahoma", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: v.$special_dark-grey;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.product-parameter__description {
+  margin: 0;
+}

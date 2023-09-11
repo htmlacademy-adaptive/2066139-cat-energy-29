@@ -23,10 +23,11 @@
   @media (min-width: v.$desktop-width) {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: calc((100vw - (v.$desktop-width - 2 * v.$desktop-pd)) / 2);
     column-gap: 87px;
     padding: 60px 79px;
     background-color: v.$basic-white;
+    z-index: 2;
   }
 }
 

@@ -1,0 +1,49 @@
+@use "../../global/variables.scss" as v;
+@use "../base/decor-line-generate.scss" as line;
+
+.additionally {
+  padding-bottom: 35px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 70px 54px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 v.$desktop-pd 61px;
+  }
+}
+
+.additionally__title {
+  display: flex;
+  margin-bottom: 34px;
+
+  @include line.line-decor-section ($mr:-20px);
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 57px;
+
+    @include line.line-decor-section ($width-left: 30px, $mt: 23px, $ml:-70px, $mr:-70px, $gap: 40px, $count-line: 2);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    @include line.line-decor-section ($width-left: 70px, $mt: 23px, $ml:-110px, $mr:-110px, $gap: 40px, $count-line: 2);
+  }
+}
+
+.additionally__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 79px;
+  }
+}

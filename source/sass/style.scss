@@ -10,6 +10,7 @@
 /* HEADER */
 @use "./blocks/base/main-header.scss";
 @use "./blocks/base/main-nav.scss";
+@use "./blocks/base/site-nav.scss";
 
 /* MAIN*/
 @use "./blocks/base/main-container.scss";
@@ -17,7 +18,6 @@
 @use "./blocks/base/description-text.scss";
 
 /* FOOTER */
-@use "./blocks/base/main-footer.scss";
 @use "./blocks/base/address.scss";
 @use "./blocks/base/location.scss";
 @use "./blocks/base/social.scss";
@@ -26,9 +26,11 @@
 @use "./blocks/index/promo-product.scss";
 @use "./blocks/index/nutrition-programs.scss";
 @use "./blocks/index/nutrition-program.scss";
+@use "./blocks/index/program-link.scss";
 @use "./blocks/index/advantages-product.scss";
 @use "./blocks/index/advantages.scss";
 @use "./blocks/index/nutritional-results.scss";
+@use "./blocks/index/example-list.scss";
 @use "./blocks/index/slider-compare-cat.scss";
 
 /* CATALOG*/
@@ -36,6 +38,7 @@
 @use "./blocks/catalog/catalog-product.scss";
 @use "./blocks/catalog/cat-product.scss";
 @use "./blocks/catalog/product-card.scss";
+@use "./blocks/catalog/parameters.scss";
 @use "./blocks/catalog/additionally-catalog.scss";
 @use "./blocks/catalog/additionally-product.scss";
 @use "./blocks/catalog/additionally-product-card.scss";
@@ -45,6 +48,11 @@
 @use "./blocks/form/title-form.scss";
 @use "./blocks/form/main-inner-program-nutrition.scss";
 @use "./blocks/form/program-nutrition-form.scss";
+@use "./blocks/form/program-form.scss";
+@use "./blocks/form/cat-param.scss";
+@use "./blocks/form/cat-nutrition.scss";
+@use "./blocks/form/owner-data.scss";
+@use "./blocks/form/additionally.scss";
 @use "./blocks/form/data-label.scss";
 @use "./blocks/form/control-label.scss";
 @use "./blocks/form/control-input.scss";

@@ -39,3 +39,29 @@
     @include line.line-decor-section ($width-left: 70px, $mt: 25px, $ml:-110px, $mr:-434px, $gap: 40px, $count-line: 2);
   }
 }
+
+.additionally-catalog__product {
+  margin-bottom: 35px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additionally-catalog__gift {
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 2/3;
+  }
+}

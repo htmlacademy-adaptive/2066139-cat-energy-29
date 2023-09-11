@@ -16,14 +16,15 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    width: v.$desktop-width - v.$desktop-pd * 2;
+    margin: 0 auto;
     padding-top: 55px;
 
     &.main-header--absolute {
       position: absolute;
       top: 0;
-      left: 0;
-      box-sizing: border-box;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 5;
     }
   }
@@ -42,6 +43,23 @@
 
     &:hover {
       opacity: 0.8;
+
+      .main-header__logo-text {
+        transform-origin: 50% 100%;
+        transform: rotate(360deg);
+      }
+    }
+
+    &:focus-visible {
+      outline: 3px solid v.$focus;
+      outline-offset: 2px;
+    }
+
+    @supports not selector(:focus-visible) {
+      &:focus {
+        outline: 3px solid v.$focus;
+        outline-offset: 2px;
+      }
     }
 
     &:active {
@@ -73,6 +91,8 @@
   @media (min-width: v.$desktop-width) {
     width: 118px;
     height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
   }
 }
 

@@ -72,106 +72,23 @@
 @media (max-width: v.$mobile-width-only) {
   .main-nav--closed .site-nav__item {
     display: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: v.$basic-white;
-    transform: translateY(100%);
   }
+
+  .main-nav--closed .main-nav__wrapper {
+    transform: scale(0) translateY(90%);
+    opacity: 0;
+  }
+
 
   .main-nav--opened .main-nav__wrapper {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 1px;
     z-index: 10;
     width: 100%;
     background-color: v.$basic-white;
-    transform: translateY(100%);
-  }
-}
-
-.site-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: v.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 550px;
-  }
-}
-
-.site-nav__item {
-  text-align: center;
-
-  @media (max-width: v.$mobile-width-only) {
-    &::before {
-      position: absolute;
-      left: 0;
-      right: 0;
-      content: "";
-      height: 1px;
-      background-color: v.$index-line-nav;
-    }
-  }
-
-  @media (min-width: v.$tablet-width) {
-    &:not(:last-child) {
-      margin-right: 33px;
-    }
-  }
-}
-
-.site-nav__link {
-  position: relative;
-  display: block;
-  padding: 22px 0 24px;
-  font-size: 20px;
-  line-height: 20px;
-  color: v.$basic-black;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  @media (min-width: v.$tablet-width) {
-    padding: 13px 0;
-    font-size: 18px;
-    line-height: 24px;
-
-    &:hover:not(.site-nav__link--current) {
-      opacity: 0.6;
-    }
-
-    &:active:not(.site-nav__link--current) {
-      opacity: 0.3;
-    }
-
-    &--current::after {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 2px;
-      content: "";
-      height: 2px;
-      background-color: v.$basic-green;
-    }
-  }
-
-  @media (min-width: v.$desktop-width) {
-    padding: 16px 0 13px;
-    font-size: 20px;
-    line-height: auto;
-  }
-}
-
-@media (min-width: v.$desktop-width) {
-  .main-header--absolute .site-nav__link {
-    color: v.$basic-white;
-
-    &--current::after {
-      background-color: v.$basic-white;
-    }
+    opacity: 1;
+    transform: scale(1) translateY(100%);
+    transition: transform 0.5s, opacity 0.3s 0.2s;
   }
 }

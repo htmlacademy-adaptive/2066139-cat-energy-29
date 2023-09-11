@@ -1,8 +1,14 @@
 @use "../../global/variables.scss" as v;
 
 .catalog-product__list {
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+    gap: 60px;
+  }
+
   @media (min-width: v.$desktop-width) {
-    // max-width: v.$desktop-width - v.$desktop-pd * 2;
-    // margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 63px 80px;
   }
 }

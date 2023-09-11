@@ -1,0 +1,96 @@
+@use "../../global/variables.scss" as v;
+
+.site-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+  }
+}
+
+.site-nav__item {
+  text-align: center;
+
+  @media (max-width: v.$mobile-width-only) {
+    &::before,
+    &:last-child::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 1px;
+      background-color: v.$index-line-nav;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+}
+
+.site-nav__link {
+  position: relative;
+  display: block;
+  padding: 22px 0 24px;
+  font-size: 20px;
+  line-height: 20px;
+  color: v.$basic-black;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 13px 0;
+    font-size: 18px;
+    line-height: 24px;
+
+    &:hover:not(.site-nav__link--current) {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      outline: 3px solid v.$focus;
+      outline-offset: 2px;
+    }
+
+    @supports not selector(:focus-visible) {
+      &:focus {
+        outline: 3px solid v.$focus;
+        outline-offset: 2px;
+      }
+    }
+
+    &:active:not(&--current) {
+      opacity: 0.3;
+    }
+
+    &--current::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      content: "";
+      height: 2px;
+      background-color: v.$basic-green;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 16px 0 13px;
+    font-size: 20px;
+    line-height: normal;
+
+    .main-header--absolute & {
+      color: v.$basic-white;
+
+      &--current::after {
+        background-color: v.$basic-white;
+      }
+    }
+  }
+}

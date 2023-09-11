@@ -1,0 +1,63 @@
+@use "../../global/variables.scss" as v;
+@use "../base/decor-line-generate.scss" as line;
+
+.owner-data {
+  padding-top: 26px;
+  padding-bottom: 24px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 65px 70px 65px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 70px v.$desktop-pd;
+  }
+}
+
+.owner-data__title {
+  display: flex;
+  margin-bottom: 35px;
+
+  @include line.line-decor-section ($mr:-20px);
+
+  span {
+    max-width: 190px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 100%;
+    margin-bottom: 76px;
+
+    @include line.line-decor-section ($width-left: 30px, $mt: 23px, $ml:-70px, $mr:-70px, $gap: 40px, $count-line: 2);
+
+    span {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-column: 1/-1;
+
+    @include line.line-decor-section ($width-left: 70px, $mt: 23px, $ml:-110px, $mr:-110px, $gap: 40px, $count-line: 2);
+  }
+}
+
+.owner-data__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 14px;
+
+  @media (min-width: v.$tablet-width) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-direction: row;
+    gap: 20px 80px;
+
+    .owner-data__label {
+      max-width: 570px;
+    }
+  }
+}
