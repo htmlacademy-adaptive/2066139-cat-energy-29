@@ -119,13 +119,14 @@
   top: calc(100% - 313px);
   left: 50%;
   transform: translateX(-50%);
+  object-fit: contain;
 
   @media (min-width: v.$tablet-width) {
     top: auto;
     bottom: 0;
     left: 30px;
     width: 709px;
-    height: auto;
+    height: 609px;
     transform: none;
     z-index: -1;
   }
@@ -134,7 +135,7 @@
     top: -82px;
     left: 447px;
     width: 552px;
-    height: auto;
+    height: 499px;
     z-index: 1;
   }
 }

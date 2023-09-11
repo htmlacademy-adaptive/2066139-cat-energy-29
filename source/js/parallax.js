@@ -6,7 +6,6 @@ layerOne.addEventListener('mousemove', function(e) {
     layerOne.style.willChange = 'transform'; // оптимизация
     const pageX = e.clientX - window.innerWidth/2,
           pageY = e.clientY - window.innerHeight/2;
-          
     layerOne.style.transform = 'translateX(' + (1 + pageX/200) + '%) translateY(' + (1 + pageY/200) + '%)';
   }
 });
