@@ -34,6 +34,7 @@
   @media (min-width: v.$tablet-width) {
     display: flex;
     align-items: center;
+    transition: opacity 0.2s;
 
     .main-header__logo {
       width: 60px;
@@ -43,11 +44,6 @@
 
     &:hover {
       opacity: 0.8;
-
-      .main-header__logo-text {
-        transform-origin: 50% 100%;
-        transform: rotate(360deg);
-      }
     }
 
     &:focus-visible {
@@ -91,8 +87,6 @@
   @media (min-width: v.$desktop-width) {
     width: 118px;
     height: auto;
-    transform: rotate(0deg);
-    transition: transform 0.5s;
   }
 }
 

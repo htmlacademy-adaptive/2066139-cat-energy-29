@@ -8,7 +8,9 @@
   @media (min-width: v.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 550px;
+    justify-content: flex-end;
+    column-gap: 33px;
+    max-width: 600px;
   }
 }
 
@@ -24,12 +26,6 @@
       content: "";
       height: 1px;
       background-color: v.$index-line-nav;
-    }
-  }
-
-  @media (min-width: v.$tablet-width) {
-    &:not(:last-child) {
-      margin-right: 33px;
     }
   }
 }
