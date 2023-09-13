@@ -6,6 +6,7 @@ const button = container.querySelector('[data-button-slider]');
 const {x: containerX, width: containerWidth} = container.getBoundingClientRect();
 
 const handleDown = (e) => {
+  // События движения и опускание кнопки мыши
   window.addEventListener('mousemove', handleDrag);
   window.addEventListener('mouseup', handleMouseUp);
 }
@@ -16,7 +17,7 @@ const handleDrag = (e) => {
   if (buttonPos < 0 || buttonPos > containerWidth) {
     return;
   }
-
+  // Вычисляет процент текущей позиции кнопки для clip-path
   const percent = buttonPos / containerWidth * 100;
   console.log(e.clientX);
 
